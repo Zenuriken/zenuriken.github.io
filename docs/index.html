@@ -10,152 +10,16 @@
 
 
 <script>
-  const kvArray_speed = [['Walking', 3.1], ['Boosted Mini S Board', 18], ['Evolve Bamboo GTR 2in1', 24], ['OneWheel XR', 19], ['MotoTec Skateboard', 22], 
-                  ['Segway Ninebot S', 10], ['Segway Ninebot S-PLUS', 12], ['Razor Scooter', 18], ['GeoBlade 500', 15], ['Hovertrax Hoverboard', 9]];
-  const transType2Speed = new Map(kvArray_speed);
-
-  const kvArray_range = [['Walking', 30], ['Boosted Mini S Board', 7], ['Evolve Bamboo GTR 2in1', 31], ['OneWheel XR', 18], ['MotoTec Skateboard', 10], 
-                    ['Segway Ninebot S', 13], ['Segway Ninebot S-PLUS', 22], ['Razor Scooter', 15], ['GeoBlade 500', 8], ['Hovertrax Hoverboard', 6]];
-  const transType2Range = new Map(kvArray_range);
-
-  // TIME MODE: Verifies and constrains the input.
-  function VerifyDistInput() {
-    var dist_elem = document.getElementById("dist");
-    if (dist_elem.checkValidity()) {
-      var transType = document.getElementById("transType").value;
-      document.getElementById("time").innerHTML = CalculateTime(dist_elem.value, transType);
-      PopulateTableWithTimes(dist_elem.value);
-    } else if (Math.sign(dist_elem.value) === -1 || Math.sign(dist_elem.value) === -0) {
-      document.getElementById("time").innerHTML = "OUT OF RANGE";
-      ClearComparisonTimes();
-    } else {
-      document.getElementById("time").innerHTML = "OUT OF RANGE";
-      PopulateTableWithTimes(dist_elem.value);
-    }
-  }
-
-  // TIME MODE: Resets and then populates the table with comparison times for the given distance.
-  function PopulateTableWithTimes(dist) {
-    var currType = document.getElementById("transType").value;
-    var table = document.getElementById("testBody");
-    while (table.hasChildNodes()) {
-      table.removeChild(table.firstChild);
-    }
-    for (let transType of transType2Speed.keys()) {
-      if (transType != currType) {
-        let row = table.insertRow();
-        let type = row.insertCell(0);
-        type.innerHTML = transType;
-        let time = row.insertCell(1);
-        time.innerHTML = CalculateTime(dist, transType);
-      }
-    }
-  }
-
-  // TIME MODE: Calculates the time it will take to travel the specified distance with the selected transporation.
-  function CalculateTime(dist, transType) {
-    var range = transType2Range.get(transType);
-    if (dist > range) return "OUT OF RANGE";
-    var speed = transType2Speed.get(transType);
-    var totalmins = Math.round(dist / speed * 60);
-    var hours = Math.floor(totalmins / 60);
-    var mins = totalmins % 60;
-    var string = "";
-    if (hours < 1) {
-      string = mins + " min";
-    } else if (mins > 0) {
-      string = hours + " hr and " + mins + " min";
-    } else {
-      string = hours + " hr";
-    }
-    return string;
-  }
-
-  // TIME MODE: Clears the distance and sets the range based on the selected transportation.
-  function ClearDistInput() {
-    var currType = document.getElementById("transType").value;
-    var range = transType2Range.get(currType);
-    var dist = document.getElementById("dist");
-    dist.value = "";
-    dist.max = range;
-    dist.placeholder = "Enter a number between 0-" + range + ".";
-    ClearComparisonTimes();
-  }
-
-  // TIME MODE: Clears the table of times.
-  function ClearComparisonTimes() {
-    var table = document.getElementById("testBody");
-    while (table.hasChildNodes()) {
-      table.removeChild(table.firstChild);
-    }
-  }
-
-  // SOURCE: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_tabs
-  function OpenTab(evt, tabName) {
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-      tabcontent[i].style.display = "none";
-    }
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-      tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-    document.getElementById(tabName).style.display = "block";
-    evt.currentTarget.className += " active";
-  }
-
-  // DISTANCE MODE: Verifies the time is > 0.
-  function VerifyTimeInput() {
-    var time_elem = document.getElementById("time_d");
-    if (time_elem.checkValidity()) {
-      var transType = document.getElementById("transType_d").value;
-      document.getElementById("dist_d").innerHTML = CalculateDistance(time_elem.value, transType);
-      PopulateTableWithDistances(time_elem.value);
-    } else {
-      document.getElementById("dist_d").innerHTML = "INVALID TIME";
-      ClearComparisonDistances();
-    }
-  }
-
-  // DISTANCE MODE: Calculates the Distance.
-  function CalculateDistance(time, transType) {
-    var range = transType2Range.get(transType);
-    var speed = transType2Speed.get(transType);
-    var hours = time / 60;
-    var dist = Math.round(speed * hours * 100) / 100;
-    if (dist >= range) {
-      return range + " miles (MAX RANGE)"
-    } else {
-      return dist + " miles"
-    }
-  }
-
-  // DISTANCE MODE: Populates the table full of distances based on the given time.
-  function PopulateTableWithDistances(time) {
-    var currType = document.getElementById("transType_d").value;
-    var table = document.getElementById("testBody_d");
-    while (table.hasChildNodes()) {
-      table.removeChild(table.firstChild);
-    }
-    for (let transType of transType2Speed.keys()) {
-      if (transType != currType) {
-        let row = table.insertRow();
-        let type = row.insertCell(0);
-        type.innerHTML = transType;
-        let dist = row.insertCell(1);
-        dist.innerHTML = CalculateDistance(time, transType);
-      }
-    }
-  }
-
-  // DISTANCE MODE: Clears the table of distances.
-  function ClearComparisonDistances() {
-    var table = document.getElementById("testBody_d");
-    while (table.hasChildNodes()) {
-      table.removeChild(table.firstChild);
-    }
-  }
+  function scrollToTargetAdjusted(targetElement){
+    var element = document.getElementById(targetElement);
+    var headerOffset = 100;
+    var elementPosition = element.getBoundingClientRect().top;
+    var offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+    window.scrollTo({
+         top: offsetPosition,
+         behavior: "smooth"
+    });
+}
 </script>
 
 
@@ -165,18 +29,22 @@
   </nav>
 
   <div class="sidenav">
-    <a href="#about">About</a>
-    <a href="#videoGames">Video Games</a>
-    <a href="#comGraphics">Computer Graphics</a>
-    <a href="#comVision">Computer Vision</a>
-    <a href="#ai">Artifical Intelligence</a>
-    <a href="#ui">User Interface</a>
-    <a href="#contact">Contact</a>
+    <p onclick="scrollToTargetAdjusted('about');">About</p>
+    <p onclick="scrollToTargetAdjusted('videoGames');">Video Games</p>
+    <p onclick="scrollToTargetAdjusted('comGraphics');">Computer Graphics</p>
+    <p onclick="scrollToTargetAdjusted('comVision');">Computer Vision</p>
+    <p onclick="scrollToTargetAdjusted('ai');">Artifical Intelligence</p>
+    <p onclick="scrollToTargetAdjusted('ui');">User Interface</p>
+    <p onclick="scrollToTargetAdjusted('contact');">Contact</p>
   </div>
 
 
   <div id="about">
     <h1>About</h1>
+    <p>My name is Henry and I like chicken.</p>
+    <p>My name is Henry and I like chicken.</p>
+    <p>My name is Henry and I like chicken.</p>
+    <p>My name is Henry and I like chicken.</p>
     <p>My name is Henry and I like chicken.</p>
   </div>
 
@@ -184,6 +52,11 @@
 
   <div id="videoGames">
     <h1>Video Games</h1>
+    <p>My name is Henry and I like chicken.</p>
+    <p>My name is Henry and I like chicken.</p>
+    <p>My name is Henry and I like chicken.</p>
+    <p>My name is Henry and I like chicken.</p>
+    <p>My name is Henry and I like chicken.</p>
     <p>My name is Henry and I like chicken.</p>
   </div>
   
@@ -193,6 +66,11 @@
   <div id="comGraphics">
     <h1>Computer Graphics</h1>
     <p>My name is Henry and I like chicken.</p>
+    <p>My name is Henry and I like chicken.</p>
+    <p>My name is Henry and I like chicken.</p>
+    <p>My name is Henry and I like chicken.</p>
+    <p>My name is Henry and I like chicken.</p>
+    <p>My name is Henry and I like chicken.</p>
   </div>
   
   <hr>
@@ -200,6 +78,11 @@
 
   <div id="comVision">
     <h1>Computer Vision</h1>
+    <p>My name is Henry and I like chicken.</p>
+    <p>My name is Henry and I like chicken.</p>
+    <p>My name is Henry and I like chicken.</p>
+    <p>My name is Henry and I like chicken.</p>
+    <p>My name is Henry and I like chicken.</p>
     <p>My name is Henry and I like chicken.</p>
   </div>
   
@@ -209,6 +92,11 @@
   <div id="ai">
     <h1>Artifical Intelligence</h1>
     <p>My name is Henry and I like chicken.</p>
+    <p>My name is Henry and I like chicken.</p>
+    <p>My name is Henry and I like chicken.</p>
+    <p>My name is Henry and I like chicken.</p>
+    <p>My name is Henry and I like chicken.</p>
+    <p>My name is Henry and I like chicken.</p>
   </div>
   
   <hr>
@@ -217,6 +105,11 @@
   <div id="ui">
     <h1>User Interface</h1>
     <p>My name is Henry and I like chicken.</p>
+    <p>My name is Henry and I like chicken.</p>
+    <p>My name is Henry and I like chicken.</p>
+    <p>My name is Henry and I like chicken.</p>
+    <p>My name is Henry and I like chicken.</p>
+    <p>My name is Henry and I like chicken.</p>
   </div>
   
   <hr>
@@ -224,6 +117,11 @@
 
   <div id="contact">
     <h1>Contact</h1>
+    <p>My name is Henry and I like chicken.</p>
+    <p>My name is Henry and I like chicken.</p>
+    <p>My name is Henry and I like chicken.</p>
+    <p>My name is Henry and I like chicken.</p>
+    <p>My name is Henry and I like chicken.</p>
     <p>My name is Henry and I like chicken.</p>
   </div>
 
