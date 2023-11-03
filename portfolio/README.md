@@ -25,3 +25,30 @@ If you are developing a production application, we recommend updating the config
 - Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
 - Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
 - Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+
+
+# Steps to set up:
+
+npm create vite@latest
+
+Select typescript
+
+npm install
+
+npm install gh-pages --save-dev
+
+Update package.json with the following:
+
+"scripts": {
+    "predeploy" : "npm run build",
+    "deploy" : "gh-pages -d dist",
+    ...
+}
+...
+"homepage": "https://{username}.github.io/{repo-name}/"
+
+npm run deploy
+
+Select gh-pages/root as the source in Github Pages settings
+
+More info: https://medium.com/@aishwaryaparab1/deploying-vite-deploying-vite-app-to-github-pages-166fff40ffd3
