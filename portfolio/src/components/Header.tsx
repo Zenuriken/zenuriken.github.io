@@ -106,6 +106,13 @@ export default function Header({onClick}: props) {
         >
           Projects
         </Link>
+        <Link
+          onClick={() => {
+            scrollToTarget("recommendations");
+          }}
+        >
+          Games
+        </Link>
       </LinkContainer>
     </HeaderContainer>
   );

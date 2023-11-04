@@ -29,6 +29,7 @@ const IconRow = styled.div`
   flex-direction: row;
   gap: 100px;
   margin: 0px;
+  height: 200px;
 `;
 
 const Column = styled.div`
@@ -75,12 +76,19 @@ const Image = styled.img`
 `;
 
 const IconContainer = styled.div`
-  display: flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     width: 50px;
     height: 50px;
     overflow: hidden;
+
+  &:hover {
+    width: 75px;
+    height: 75px;
+    filter: blur(5px);
+    cursor: pointer;
+  }
 `;
 
 
