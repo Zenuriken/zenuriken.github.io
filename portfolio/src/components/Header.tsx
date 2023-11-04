@@ -2,51 +2,52 @@ import styled from "styled-components";
 
 // #region CSS
 const HeaderContainer = styled.div`
-  width: 100%;
+  align-items: center;
+  background-color: rgba(33, 42, 62, 0.75);
+  box-shadow: 0px 5px 20px 5px rgba(0, 0, 0, 0.25);
   display: flex;
   flex-direction: row;
-  background-color: #414754;
+  justify-content: space-between;
   position: fixed;
   top: 0px;
-  align-items: center;
-  justify-content: space-between;
-  /* padding: 10px 0px; */
-  box-shadow: 0px 4px 24px 13px rgba(0, 0, 0, 0.25);
+  width: 100%;
   z-index: 1;
 `;
 
 const HeaderTitle = styled.h1`
-  color: #e5d7be;
-  font-size: 50px;
+  color: #F1F6F9;
+  font-size: 30px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  padding: 10px 20px;
   margin: 0px 0px;
+  padding: 10px 30px;
 
   &:hover {
+    color: #9BA4B5;
     cursor: pointer;
-    color: #cfa358;
   }
 `;
 
 const LinkContainer = styled.div`
   display: flex;
   flex-direction: row;
-  gap: 20px;
-  padding: 10px 30px;
+  gap: 40px;
+  padding: 5px 30px;
 `;
 
-const Link = styled.p`
-  color: #e5d7be;
+const Link = styled.div`
+  display: inline-block;
+  border-width: 10px;
+  border-color: white;
+  color: #F1F6F9;
+  font-size: 20px;
   text-align: center;
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
+  width: 100px;
+  height: 100%;
 
   &:hover {
-    color: #cfa358;
+    color: #9BA4B5;
     cursor: pointer;
   }
 `;
@@ -65,9 +66,9 @@ export default function Header({onClick}: props) {
     if (element === null) {
       return;
     }
-    var headerOffset = 100;
-    var elementPosition = element.getBoundingClientRect().top;
-    var offsetPosition = elementPosition + window.scrollY - headerOffset;
+    const headerOffset = 100;
+    const elementPosition = element.getBoundingClientRect().top;
+    const offsetPosition = elementPosition + window.scrollY - headerOffset;
     window.scrollTo({
       top: offsetPosition,
       behavior: "smooth",
@@ -81,7 +82,7 @@ export default function Header({onClick}: props) {
           onClick();
         }}
       >
-        Gamer Rantz
+        Henry's Portfolio
       </HeaderTitle>
       <LinkContainer>
         <Link
@@ -89,21 +90,21 @@ export default function Header({onClick}: props) {
             scrollToTarget("news");
           }}
         >
-          News
+          Home
         </Link>
         <Link
           onClick={() => {
             scrollToTarget("reviews");
           }}
         >
-          Reviews
+          Resume
         </Link>
         <Link
           onClick={() => {
             scrollToTarget("recommendations");
           }}
         >
-          Recommendations
+          Projects
         </Link>
       </LinkContainer>
     </HeaderContainer>
