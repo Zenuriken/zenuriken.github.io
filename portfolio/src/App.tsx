@@ -1,10 +1,12 @@
 import './App.css';
 import styled from 'styled-components';
 import Header from './components/Header';
+import SideNav from './components/SideNav';
 import profile from './assets/profile.jpg';
 import icon_github from './assets/icon_github.png';
 import icon_linkedin from './assets/icon_linkedin.png';
 import icon_mail from './assets/icon_mail.png';
+import { useState } from 'react';
 
 
 // Need to order media queries from smallest to largest.
@@ -86,13 +88,14 @@ const IconContainer = styled.div`
   &:hover {
     width: 75px;
     height: 75px;
-    filter: blur(5px);
     cursor: pointer;
   }
 `;
 
 
 export default function App() {
+
+  const [clickedProjects, setClickedProjects] = useState(false);
 
   // Renders the content of this page
   const renderPageContent = () => {
@@ -124,12 +127,16 @@ export default function App() {
     );
   }
 
+  const renderProjects = () => {
+    return <SideNav onClick={() => {}}/>;
+  }
+
 
   return (
     <>
-      <Header onClick={() => {}}/>
+      <Header onClick={() => setClickedProjects(!clickedProjects)}/>
       <PageContainer>
-        {renderPageContent()}
+        {clickedProjects ? renderProjects() : renderPageContent()}
       </PageContainer>
     </>
   )
