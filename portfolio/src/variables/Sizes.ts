@@ -1,3 +1,4 @@
+// The width of the screen based on the device.
 const size = {
     mobileS: '320px',
     mobileM: '375px',
@@ -8,14 +9,15 @@ const size = {
     desktop: '2560px'
 }
 
-export const device = {
-    mobileS: `(min-width: ${size.mobileS})`,
-    mobileM: `(min-width: ${size.mobileM})`,
-    mobileL: `(min-width: ${size.mobileL})`,
-    tablet: `(min-width: ${size.tablet})`,
-    laptop: `(min-width: ${size.laptop})`,
-    laptopL: `(min-width: ${size.laptopL})`,
-    desktop: `(min-width: ${size.desktop})`,
-    desktopL: `(min-width: ${size.desktop})`
+//
+export const deviceQuery = {
+    mobileS: `@media (min-width: ${size.mobileS})`,
+    mobileM: `@media (min-width: ${size.mobileM})`,
+    mobileL: `@media (min-width: ${size.mobileL})`,
+    tablet: `@media (min-width: ${size.tablet})`,
+    laptop: `@media (min-width: ${size.laptop})`,
+    laptopL: `@media (min-width: ${size.laptopL})`,
+    desktop: `@media (min-width: ${size.desktop})`,
+    desktopL: `@media (min-width: ${size.desktop})`
 };
 

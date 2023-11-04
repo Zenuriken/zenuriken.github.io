@@ -1,6 +1,7 @@
 import './App.css'
 import styled from 'styled-components';
-import { device } from './variables/Sizes';
+import { deviceQuery } from './variables/Sizes';
+import Header from './components/Header';
 
 // Need to order media queries from smallest to largest.
 const Page = styled.div`
@@ -8,16 +9,16 @@ const Page = styled.div`
   font-family: "sans-serif";
   text-align: center;
 
-  @media ${device.mobileS} { 
+  ${deviceQuery.mobileS} { 
     background-color: red;
   }
 
-  @media ${device.mobileM} {
-    background-color: blue;
+  ${deviceQuery.mobileM} {
+    background-color: orange;
   }
 
-  @media ${device.mobileL} {
-    background-color: green;
+  ${deviceQuery.tablet} {
+    background-color: yellow;
   }
 `;
 
@@ -25,7 +26,7 @@ const Page = styled.div`
 function App() {
 
   return (
-    <Page> potato </Page>
+    <Header onClick={() => {}}></Header>
   )
 }
 
