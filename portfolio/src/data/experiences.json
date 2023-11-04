@@ -1,0 +1,24 @@
+{
+    "my-experience": {
+        "id": "my-experience",
+        "position": "My position",
+        "company": "My Company",
+        "years": "2015 - 2016",
+        "logo:": "my-logo.png",
+        "description": [
+            "My description",
+            "My description"
+        ]
+    },
+    "my-experience-2": {
+        "id": "my-experience-2",
+        "position": "My position",
+        "company": "My Company",
+        "years": "2015 - 2016",
+        "logo:": "my-logo.png",
+        "description": [
+            "My description",
+            "My description"
+        ]
+    }
+}

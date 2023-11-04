@@ -1,18 +1,23 @@
 import './App.css'
 import styled from 'styled-components';
-import { device } from './components/Sizes';
+import { device } from './variables/Sizes';
 
+// Need to order media queries from smallest to largest.
 const Page = styled.div`
   margin: auto;
   font-family: "sans-serif";
   text-align: center;
 
-  @media ${device.laptop} { 
-    max-width: 800px;
+  @media ${device.mobileS} { 
+    background-color: red;
   }
 
-  @media ${device.desktop} {
-    max-width: 1400px;
+  @media ${device.mobileM} {
+    background-color: blue;
+  }
+
+  @media ${device.mobileL} {
+    background-color: green;
   }
 `;
 
@@ -20,7 +25,7 @@ const Page = styled.div`
 function App() {
 
   return (
-    <div> potato </div>
+    <Page> potato </Page>
   )
 }
 
