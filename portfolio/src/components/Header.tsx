@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Page } from "./../variables/Sizes";
 
 // #region CSS
 const HeaderContainer = styled.div`
@@ -12,10 +13,11 @@ const HeaderContainer = styled.div`
   top: 0px;
   width: 100%;
   z-index: 1;
+  height: 55px;
 `;
 
 const HeaderTitle = styled.h1`
-  color: #F1F6F9;
+  color: #f1f6f9;
   font-size: 30px;
   font-style: normal;
   font-weight: 400;
@@ -24,7 +26,7 @@ const HeaderTitle = styled.h1`
   padding: 10px 30px;
 
   &:hover {
-    color: #9BA4B5;
+    color: #9ba4b5;
     cursor: pointer;
   }
 `;
@@ -32,83 +34,84 @@ const HeaderTitle = styled.h1`
 const LinkContainer = styled.div`
   display: flex;
   flex-direction: row;
+  justify-content: center;
   gap: 40px;
-  padding: 5px 30px;
+  padding: 0px 30px;
+  height: 100%;
 `;
 
 const Link = styled.div`
-  display: inline-block;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   border-width: 10px;
   border-color: white;
-  color: #F1F6F9;
+  color: #f1f6f9;
   font-size: 20px;
   text-align: center;
   width: 100px;
   height: 100%;
+  border: 2px solid transparent;
 
   &:hover {
-    color: #9BA4B5;
+    color: #9ba4b5;
     cursor: pointer;
+
+    /* border-bottom: 2px solid #9ba4b5; */
   }
 `;
 
 // #endregion
 
 type props = {
-    onClick: () => void;
-}
+  setCurrentPage: (page: Page) => void;
+};
 
-export default function Header({onClick}: props) {
-  
-    const scrollToTarget = (id: string) => {
-    onClick();
-    const element = document.getElementById(id);
-    if (element === null) {
-      return;
-    }
-    const headerOffset = 100;
-    const elementPosition = element.getBoundingClientRect().top;
-    const offsetPosition = elementPosition + window.scrollY - headerOffset;
-    window.scrollTo({
-      top: offsetPosition,
-      behavior: "smooth",
-    });
-  };
+export default function Header({ setCurrentPage }: props) {
+  // const scrollToTarget = (id: string) => {
+  //   const element = document.getElementById(id);
+  //   if (element === null) {
+  //     return;
+  //   }
+  //   const headerOffset = 100;
+  //   const elementPosition = element.getBoundingClientRect().top;
+  //   const offsetPosition = elementPosition + window.scrollY - headerOffset;
+  //   window.scrollTo({
+  //     top: offsetPosition,
+  //     behavior: "smooth",
+  //   });
+  // };
 
   return (
     <HeaderContainer>
-      <HeaderTitle
-        onClick={() => {
-          onClick();
-        }}
-      >
+      <HeaderTitle onClick={() => setCurrentPage(Page.HOME)}>
         Henry's Portfolio
       </HeaderTitle>
       <LinkContainer>
         <Link
           onClick={() => {
-            scrollToTarget("news");
+            setCurrentPage(Page.HOME);
           }}
         >
           Home
         </Link>
         <Link
           onClick={() => {
-            scrollToTarget("reviews");
+            setCurrentPage(Page.RESUME);
           }}
         >
           Resume
         </Link>
         <Link
           onClick={() => {
-            scrollToTarget("recommendations");
+            setCurrentPage(Page.PROJECTS);
           }}
         >
           Projects
         </Link>
         <Link
           onClick={() => {
-            scrollToTarget("recommendations");
+            setCurrentPage(Page.GAMES);
           }}
         >
           Games

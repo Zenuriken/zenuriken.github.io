@@ -7,13 +7,15 @@ const SideNavContainer = styled.div`
   box-shadow: 0px 5px 20px 5px rgba(0, 0, 0, 0.25);
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: center; */
   position: fixed;
   left: 0px;
   height: 100%;
-  width: 300px;
+  width: 250px;
   z-index: 0;
   gap: 50px;
+  top: 55px;
+  padding: 50px 0px;
 `;
 
 const Link = styled.div`
