@@ -36,7 +36,7 @@ export default function App() {
 
   return (
     <>
-      <Header setCurrentPage={setCurrentPage} />
+      <Header currentPage={currentPage} setCurrentPage={setCurrentPage} />
       <PageContainer>{renderPage()}</PageContainer>
     </>
   );

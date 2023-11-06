@@ -8,12 +8,12 @@ const HeaderContainer = styled.div`
   box-shadow: 0px 5px 20px 5px rgba(0, 0, 0, 0.25);
   display: flex;
   flex-direction: row;
+  height: 55px;
   justify-content: space-between;
   position: fixed;
   top: 0px;
   width: 100%;
   z-index: 1;
-  height: 55px;
 `;
 
 const HeaderTitle = styled.h1`
@@ -40,7 +40,7 @@ const LinkContainer = styled.div`
   height: 100%;
 `;
 
-const Link = styled.div`
+const Link = styled.div<{ isCurrentPage: boolean }>`
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -53,6 +53,11 @@ const Link = styled.div`
   height: 100%;
   border: 2px solid transparent;
 
+  pointer-events: ${(props) => (props.isCurrentPage ? "none" : "auto")};
+  color: ${(props) => (props.isCurrentPage ? "#9ba4b5" : "#f1f6f9")};
+  border-bottom: ${(props) =>
+    props.isCurrentPage ? "2px solid #9ba4b5" : "2px solid transparent"};
+
   &:hover {
     color: #9ba4b5;
     cursor: pointer;
@@ -64,10 +69,11 @@ const Link = styled.div`
 // #endregion
 
 type props = {
+  currentPage: Page;
   setCurrentPage: (page: Page) => void;
 };
 
-export default function Header({ setCurrentPage }: props) {
+export default function Header({ currentPage, setCurrentPage }: props) {
   // const scrollToTarget = (id: string) => {
   //   const element = document.getElementById(id);
   //   if (element === null) {
@@ -82,6 +88,12 @@ export default function Header({ setCurrentPage }: props) {
   //   });
   // };
 
+  const handlePageChange = (page: Page) => {
+    setCurrentPage(page);
+
+    // scrollToTarget(page);
+  };
+
   return (
     <HeaderContainer>
       <HeaderTitle onClick={() => setCurrentPage(Page.HOME)}>
@@ -89,30 +101,26 @@ export default function Header({ setCurrentPage }: props) {
       </HeaderTitle>
       <LinkContainer>
         <Link
-          onClick={() => {
-            setCurrentPage(Page.HOME);
-          }}
+          isCurrentPage={currentPage === Page.HOME}
+          onClick={() => handlePageChange(Page.HOME)}
         >
           Home
         </Link>
         <Link
-          onClick={() => {
-            setCurrentPage(Page.RESUME);
-          }}
+          isCurrentPage={currentPage === Page.RESUME}
+          onClick={() => handlePageChange(Page.RESUME)}
         >
           Resume
         </Link>
         <Link
-          onClick={() => {
-            setCurrentPage(Page.PROJECTS);
-          }}
+          isCurrentPage={currentPage === Page.PROJECTS}
+          onClick={() => handlePageChange(Page.PROJECTS)}
         >
           Projects
         </Link>
         <Link
-          onClick={() => {
-            setCurrentPage(Page.GAMES);
-          }}
+          isCurrentPage={currentPage === Page.GAMES}
+          onClick={() => handlePageChange(Page.GAMES)}
         >
           Games
         </Link>
