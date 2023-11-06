@@ -28,3 +28,11 @@ export enum Page {
   PROJECTS,
   GAMES,
 }
+
+// Holds the values of all the different pages.
+export enum Section {
+  COMPUTERGRAPHICS,
+  COMPUTERVISION,
+  USERINTERFACES,
+  FULLSTACK,
+}

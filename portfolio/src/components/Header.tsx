@@ -88,7 +88,7 @@ export default function Header({ currentPage, setCurrentPage }: props) {
   //   });
   // };
 
-  const handlePageChange = (page: Page) => {
+  const onPageChange = (page: Page) => {
     setCurrentPage(page);
 
     // scrollToTarget(page);
@@ -102,25 +102,25 @@ export default function Header({ currentPage, setCurrentPage }: props) {
       <LinkContainer>
         <Link
           isCurrentPage={currentPage === Page.HOME}
-          onClick={() => handlePageChange(Page.HOME)}
+          onClick={() => onPageChange(Page.HOME)}
         >
           Home
         </Link>
         <Link
           isCurrentPage={currentPage === Page.RESUME}
-          onClick={() => handlePageChange(Page.RESUME)}
+          onClick={() => onPageChange(Page.RESUME)}
         >
           Resume
         </Link>
         <Link
           isCurrentPage={currentPage === Page.PROJECTS}
-          onClick={() => handlePageChange(Page.PROJECTS)}
+          onClick={() => onPageChange(Page.PROJECTS)}
         >
           Projects
         </Link>
         <Link
           isCurrentPage={currentPage === Page.GAMES}
-          onClick={() => handlePageChange(Page.GAMES)}
+          onClick={() => onPageChange(Page.GAMES)}
         >
           Games
         </Link>

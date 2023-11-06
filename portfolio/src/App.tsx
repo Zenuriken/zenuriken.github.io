@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import { useState } from "react";
 import HomePage from "./pages/HomePage";
 import { Page } from "./variables/Sizes";
+import ProjectsPage from "./pages/ProjectsPage";
 
 // #region CSS
 const PageContainer = styled.div`
@@ -26,7 +27,7 @@ export default function App() {
       case Page.RESUME:
         return <div>Resume</div>;
       case Page.PROJECTS:
-        return <div>Projects</div>;
+        return <ProjectsPage />;
       case Page.GAMES:
         return <div>Games</div>;
       default:
