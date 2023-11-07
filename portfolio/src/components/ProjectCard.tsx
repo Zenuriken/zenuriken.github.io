@@ -1,33 +1,35 @@
 import styled from "styled-components";
-import profile from "../assets/profile.jpg";
+import { Project } from "../variables/Types";
+import icon_github from "../assets/icon_github.png";
+import { useEffect, useState } from "react";
 
 // #region CSS
 const CardContainer = styled.div`
-  background-color: #f1f6f9;
-  width: 600px;
-  height: 200px;
-  flex-shrink: 0;
-
-  display: flex;
-  /* justify-content: center; */
   align-items: center;
+  background-color: #f1f6f9;
+  border-radius: 25px;
+  display: flex;
   flex-direction: row;
-
-  border-radius: 10px;
-
-  padding: 20px;
+  flex-shrink: 0;
   gap: 20px;
+  height: 200px;
+  padding: 20px;
+  width: 600px;
+  /* border-bottom: 10px solid transparent; */
 
-  filter: drop-shadow(8px 4px 8px rgba(0, 0, 0, 0.25));
+  box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.25);
 
   &:hover {
-    background-color: #d7dbde;
+    /* background-color: #d7dbde; */
+    box-shadow: 0px 5px 25px 5px rgba(0, 0, 0, 0.25);
+    /* border-bottom: 10px solid #394867; */
+    background-color: #e0e6e9;
     cursor: pointer;
   }
 `;
 
 const CardImage = styled.img`
-  width: 300px;
+  max-width: 300px;
   height: 200px;
 `;
 
@@ -39,7 +41,7 @@ const TextContainer = styled.div`
 `;
 
 const CardTitle = styled.h2`
-  font-weight: bold;
+  margin: 0;
 `;
 
 const DescriptionText = styled.p``;
@@ -47,27 +49,23 @@ const DescriptionText = styled.p``;
 // #endregion
 
 type props = {
-  img: string;
-  title: string;
-  onClick: () => void;
+  project: Project;
 };
 
-export default function ProjectCard({ onClick, img, title }: props) {
+const IMAGE_DIR = "./../assets/";
+
+export default function ProjectCard({ project }: props) {
+  const { id, image, title, description } = project;
+
+  const [imageSrc] = useState(IMAGE_DIR + image);
+  console.log(imageSrc);
+
   return (
-    <CardContainer
-      onClick={() => {
-        onClick();
-      }}
-    >
-      <CardImage src={profile}></CardImage>
+    <CardContainer id={id}>
+      <CardImage src={imageSrc} />
       <TextContainer>
-        <CardTitle>Project 1 (Javascript, CSS, HTML)</CardTitle>
-        <DescriptionText>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-          condimentum, nunc quis facilisis interdum, nisl nisl ultricies nunc,
-          nec tincidunt dolor nisi vitae magna. Sed sed risus vitae elit
-          tincidunt luctus.
-        </DescriptionText>
+        <CardTitle>{title}</CardTitle>
+        <DescriptionText>{description}</DescriptionText>
       </TextContainer>
     </CardContainer>
   );

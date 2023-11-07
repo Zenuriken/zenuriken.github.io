@@ -1,18 +1,19 @@
 import styled from "styled-components";
 import SideNav from "../components/SideNav";
-import { Section } from "../variables/Sizes";
+import { Section } from "../variables/Types";
 import { useState } from "react";
 import ProjectCard from "../components/ProjectCard";
+import projects from "../data/projects.json";
 
 // #region CSS
 const ProjectPageContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 20px;
-  margin-left: 300px;
+  margin-left: 350px;
+  margin-bottom: 175px;
   padding-top: 100px;
-  height: 100vh;
-  width: 1920px;
+  width: 1400px;
 `;
 
 const Title = styled.h1`
@@ -33,8 +34,9 @@ const ProjectCardContainer = styled.div`
   flex-wrap: wrap;
   /* justify-content: flex-start; */
   /* align-items: flex-start; */
-  gap: 20px;
+  gap: 30px;
   /* padding-left: 260px; */
+  margin-bottom: 75px;
 `;
 // #endregion
 
@@ -49,33 +51,33 @@ export default function ProjectsPage() {
         currentSection={currentSection}
         setCurrentSection={setCurrentSection}
       />
-      <Title>Computer Graphics (C++)</Title>
+      <Title id="computerGraphics">Computer Graphics (C++)</Title>
       <ProjectCardContainer>
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
+        <ProjectCard project={projects.myProject} />
+        <ProjectCard project={projects.myProject} />
+        <ProjectCard project={projects.myProject} />
+        <ProjectCard project={projects.myProject} />
       </ProjectCardContainer>
-      <Title>Computer Vision (Python)</Title>
+      <Title id="computerVision">Computer Vision (Python)</Title>
       <ProjectCardContainer>
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
+        <ProjectCard project={projects.myProject} />
+        <ProjectCard project={projects.myProject} />
+        <ProjectCard project={projects.myProject} />
+        <ProjectCard project={projects.myProject} />
       </ProjectCardContainer>
-      <Title>User Interfaces (Java, CSS, HTML)</Title>
+      <Title id="userInterfaces">User Interfaces (Java, CSS, HTML)</Title>
       <ProjectCardContainer>
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
+        <ProjectCard project={projects.myProject} />
+        <ProjectCard project={projects.myProject} />
+        <ProjectCard project={projects.myProject} />
+        <ProjectCard project={projects.myProject} />
       </ProjectCardContainer>
-      <Title>Full Stack (React, Typescript, CSS)</Title>
+      <Title id="fullStack">Full Stack (React, Typescript, CSS)</Title>
       <ProjectCardContainer>
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
+        <ProjectCard project={projects.myProject} />
+        <ProjectCard project={projects.myProject} />
+        <ProjectCard project={projects.myProject} />
+        <ProjectCard project={projects.myProject} />
       </ProjectCardContainer>
     </ProjectPageContainer>
   );

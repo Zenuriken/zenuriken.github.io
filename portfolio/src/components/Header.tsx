@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Page } from "./../variables/Sizes";
+import { Page } from "../variables/Types";
 
 // #region CSS
 const HeaderContainer = styled.div`

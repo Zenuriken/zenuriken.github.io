@@ -31,8 +31,16 @@ export enum Page {
 
 // Holds the values of all the different pages.
 export enum Section {
-  COMPUTERGRAPHICS,
-  COMPUTERVISION,
-  USERINTERFACES,
-  FULLSTACK,
+  COMPUTERGRAPHICS = "computerGraphics",
+  COMPUTERVISION = "computerVision",
+  USERINTERFACES = "userInterfaces",
+  FULLSTACK = "fullStack",
 }
+
+export type Project = {
+  id: string;
+  title: string;
+  description: string;
+  image: string;
+  link: string;
+};

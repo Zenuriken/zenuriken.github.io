@@ -1,11 +1,13 @@
 import styled from "styled-components";
-import { Section } from "../variables/Sizes";
+import { Section } from "../variables/Types";
+import { useEffect, useState } from "react";
 
 // #region CSS
 const SideNavContainer = styled.div`
   align-items: center;
-  background-color: rgba(33, 42, 62, 0.95);
-  box-shadow: 0px 5px 20px 5px rgba(0, 0, 0, 0.25);
+  /* background-color: rgba(33, 42, 62, 0.75); */
+  /* box-shadow: 0px 5px 20px 5px rgba(0, 0, 0, 0.25); */
+  border-right: 2px solid #9ba4b5;
   display: flex;
   flex-direction: column;
   position: fixed;
@@ -49,23 +51,44 @@ type props = {
 };
 
 export default function SideNav({ currentSection, setCurrentSection }: props) {
-  //   const scrollToTarget = (id: string) => {
-  //   setCurrentSection
-  //   const element = document.getElementById(id);
-  //   if (element === null) {
-  //     return;
-  //   }
-  //   const headerOffset = 100;
-  //   const elementPosition = element.getBoundingClientRect().top;
-  //   const offsetPosition = elementPosition + window.scrollY - headerOffset;
-  //   window.scrollTo({
-  //     top: offsetPosition,
-  //     behavior: "smooth",
-  //   });
-  // };
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      if (scrollY < 330) {
+        setCurrentSection(Section.COMPUTERGRAPHICS);
+      } else if (scrollY < 1030) {
+        setCurrentSection(Section.COMPUTERVISION);
+      } else if (scrollY < 1730) {
+        setCurrentSection(Section.USERINTERFACES);
+      } else {
+        setCurrentSection(Section.FULLSTACK);
+      }
+      // console.log("Scroll pos: " + scrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const scrollToTarget = (id: string) => {
+    const element = document.getElementById(id);
+    if (element === null) {
+      return;
+    }
+    const headerOffset = 100;
+    const elementPosition = element.getBoundingClientRect().top;
+    const offsetPosition = elementPosition + window.scrollY - headerOffset;
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: "smooth",
+    });
+  };
 
   const onSectionChange = (section: Section) => {
-    setCurrentSection(section);
+    scrollToTarget(section);
   };
 
   return (

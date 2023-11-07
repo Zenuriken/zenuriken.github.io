@@ -1,9 +1,8 @@
 import "./App.css";
-import styled from "styled-components";
 import Header from "./components/Header";
 import { useState } from "react";
 import HomePage from "./pages/HomePage";
-import { Page } from "./variables/Sizes";
+import { Page } from "./variables/Types";
 import ProjectsPage from "./pages/ProjectsPage";
 
 export default function App() {
