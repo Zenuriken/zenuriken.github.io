@@ -5,6 +5,16 @@ import { useState } from "react";
 import ProjectCard from "../components/ProjectCard";
 
 // #region CSS
+const ProjectPageContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-left: 300px;
+  padding-top: 100px;
+  height: 100vh;
+  width: 1920px;
+`;
+
 const Title = styled.h1`
   color: #f1f6f9;
   font-size: 40px;
@@ -14,7 +24,17 @@ const Title = styled.h1`
   /* margin: 0; */
   width: 100%;
   text-align: left;
-  padding-left: 750px;
+  /* padding-left: 750px; */
+`;
+
+const ProjectCardContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* justify-content: flex-start; */
+  /* align-items: flex-start; */
+  gap: 20px;
+  /* padding-left: 260px; */
 `;
 // #endregion
 
@@ -24,16 +44,39 @@ export default function ProjectsPage() {
   );
 
   return (
-    <>
+    <ProjectPageContainer>
       <SideNav
         currentSection={currentSection}
         setCurrentSection={setCurrentSection}
       />
       <Title>Computer Graphics (C++)</Title>
-      {/* <ProjectCard/> */}
+      <ProjectCardContainer>
+        <ProjectCard />
+        <ProjectCard />
+        <ProjectCard />
+        <ProjectCard />
+      </ProjectCardContainer>
       <Title>Computer Vision (Python)</Title>
+      <ProjectCardContainer>
+        <ProjectCard />
+        <ProjectCard />
+        <ProjectCard />
+        <ProjectCard />
+      </ProjectCardContainer>
       <Title>User Interfaces (Java, CSS, HTML)</Title>
+      <ProjectCardContainer>
+        <ProjectCard />
+        <ProjectCard />
+        <ProjectCard />
+        <ProjectCard />
+      </ProjectCardContainer>
       <Title>Full Stack (React, Typescript, CSS)</Title>
-    </>
+      <ProjectCardContainer>
+        <ProjectCard />
+        <ProjectCard />
+        <ProjectCard />
+        <ProjectCard />
+      </ProjectCardContainer>
+    </ProjectPageContainer>
   );
 }

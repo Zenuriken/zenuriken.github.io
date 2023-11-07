@@ -4,7 +4,7 @@ import { Section } from "../variables/Sizes";
 // #region CSS
 const SideNavContainer = styled.div`
   align-items: center;
-  background-color: rgba(33, 42, 62, 0.75);
+  background-color: rgba(33, 42, 62, 0.95);
   box-shadow: 0px 5px 20px 5px rgba(0, 0, 0, 0.25);
   display: flex;
   flex-direction: column;

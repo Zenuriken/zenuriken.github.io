@@ -5,6 +5,15 @@ import icon_linkedin from "./../assets/icon_linkedin.png";
 import icon_mail from "./../assets/icon_mail.png";
 
 // #region CSS
+const HomePageContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+`;
+
 const Row = styled.div`
   display: flex;
   flex-direction: row;
@@ -81,7 +90,7 @@ const IconContainer = styled.a`
 
 export default function HomePage() {
   return (
-    <>
+    <HomePageContainer>
       <Row>
         <ImageContainer>
           <Image src={profile} />
@@ -104,6 +113,6 @@ export default function HomePage() {
           <Image src={icon_mail} />
         </IconContainer>
       </IconRow>
-    </>
+    </HomePageContainer>
   );
 }

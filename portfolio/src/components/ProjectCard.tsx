@@ -1,20 +1,22 @@
 import styled from "styled-components";
+import profile from "../assets/profile.jpg";
 
 // #region CSS
-const ArticleCardContainer = styled.div`
-  background-color: #F1F6F9;
-  width: 750px;
-  height: 282px;
+const CardContainer = styled.div`
+  background-color: #f1f6f9;
+  width: 600px;
+  height: 200px;
   flex-shrink: 0;
 
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
-  flex-direction: column;
+  flex-direction: row;
 
   border-radius: 10px;
 
-  padding-top: 10px;
+  padding: 20px;
+  gap: 20px;
 
   filter: drop-shadow(8px 4px 8px rgba(0, 0, 0, 0.25));
 
@@ -24,32 +26,49 @@ const ArticleCardContainer = styled.div`
   }
 `;
 
-const ArticleCardImage = styled.img`
-  width: 350px;
+const CardImage = styled.img`
+  width: 300px;
   height: 200px;
 `;
 
-const ArticleCardTitle = styled.p`
+const TextContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: right;
+`;
+
+const CardTitle = styled.h2`
   font-weight: bold;
 `;
+
+const DescriptionText = styled.p``;
 
 // #endregion
 
 type props = {
-  img: string,
-  title: string,
-  onClick: () => void
-}
+  img: string;
+  title: string;
+  onClick: () => void;
+};
 
-export default function ProjectCard({onClick, img, title}: props) {
+export default function ProjectCard({ onClick, img, title }: props) {
   return (
-    <ArticleCardContainer
+    <CardContainer
       onClick={() => {
         onClick();
       }}
     >
-      <ArticleCardImage src={img}></ArticleCardImage>
-      <ArticleCardTitle>{title}</ArticleCardTitle>
-    </ArticleCardContainer>
+      <CardImage src={profile}></CardImage>
+      <TextContainer>
+        <CardTitle>Project 1 (Javascript, CSS, HTML)</CardTitle>
+        <DescriptionText>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+          condimentum, nunc quis facilisis interdum, nisl nisl ultricies nunc,
+          nec tincidunt dolor nisi vitae magna. Sed sed risus vitae elit
+          tincidunt luctus.
+        </DescriptionText>
+      </TextContainer>
+    </CardContainer>
   );
 }
