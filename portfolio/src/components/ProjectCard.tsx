@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 // #region CSS
 const ArticleCardContainer = styled.div`
-  background-color: #e5d7be;
-  width: 400px;
+  background-color: #F1F6F9;
+  width: 750px;
   height: 282px;
   flex-shrink: 0;
 
@@ -19,7 +19,7 @@ const ArticleCardContainer = styled.div`
   filter: drop-shadow(8px 4px 8px rgba(0, 0, 0, 0.25));
 
   &:hover {
-    background-color: #cfa358;
+    background-color: #d7dbde;
     cursor: pointer;
   }
 `;
@@ -41,7 +41,7 @@ type props = {
   onClick: () => void
 }
 
-function ArticleCard({onClick, img, title}: props) {
+export default function ProjectCard({onClick, img, title}: props) {
   return (
     <ArticleCardContainer
       onClick={() => {
@@ -53,5 +53,3 @@ function ArticleCard({onClick, img, title}: props) {
     </ArticleCardContainer>
   );
 }
-
-export default ArticleCard;

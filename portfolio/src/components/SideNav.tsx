@@ -16,6 +16,7 @@ const SideNavContainer = styled.div`
   gap: 20px;
   top: 55px;
   padding: 50px 0px;
+  flex-grow: 0;
 `;
 
 const Link = styled.div<{ isCurrentSection: boolean }>`
