@@ -34,7 +34,7 @@ const ProjectCardContainer = styled.div`
   flex-wrap: wrap;
   /* justify-content: flex-start; */
   /* align-items: flex-start; */
-  gap: 30px;
+  gap: 50px;
   /* padding-left: 260px; */
   margin-bottom: 75px;
 `;
@@ -64,9 +64,17 @@ export default function ProjectsPage() {
       <ProjectCardContainer>
         <ProjectCard project={projects.colorizing} />
         <ProjectCard project={projects.filtersAndFrequencies} />
+        <ProjectCard project={projects.faceMorphing} />
+        <ProjectCard project={projects.autostitchingPhotoMosaics} />
+        <ProjectCard project={projects.facialKeypointDetection} />
+        <ProjectCard project={projects.poorMansAugmentedReality} />
+        <ProjectCard project={projects.lightFieldCamera} />
       </ProjectCardContainer>
       <Title id="userInterfaces">User Interfaces (Java, CSS, HTML)</Title>
-      <ProjectCardContainer></ProjectCardContainer>
+      <ProjectCardContainer>
+        <ProjectCard project={projects.voltz} />
+        <ProjectCard project={projects.storyScape} />
+      </ProjectCardContainer>
       <Title id="fullStack">Full Stack (React, Typescript, CSS)</Title>
       <ProjectCardContainer></ProjectCardContainer>
     </ProjectPageContainer>

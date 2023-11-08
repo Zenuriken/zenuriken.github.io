@@ -78,5 +78,75 @@
     ],
     "image": "/src/assets/filtersAndFrequencies.jpg",
     "link": "https://henryla.notion.site/henryla/Project-2-Fun-with-Filters-and-Frequencies-850f2fd8088248098dc8962fe57912b4"
+  },
+  "faceMorphing": {
+    "id": "faceMorphing",
+    "title": "Face Morphing",
+    "description": [
+      "Applied Delaunay triangulation to render meshes over faces for defining key correspondences.",
+      "Animated face morphs and caricatures through linear interpolation of vertices and pixels."
+    ],
+    "image": "/src/assets/faceMorphing.jpg",
+    "link": "https://henryla.notion.site/henryla/Project-3-Face-Morphing-and-Modelling-a-Photo-Collection-ab519fa705774e93866b46e6085f8cb1"
+  },
+  "autostitchingPhotoMosaics": {
+    "id": "autostitchingPhotoMosaics",
+    "title": "Auto-Stitching Photo Mosaics",
+    "description": [
+      "Stitched images together by defining correspondences and computing the homography matrix.",
+      "Implemented auto-stitching using Harris Corner Detection and RANSAC."
+    ],
+    "image": "/src/assets/autostitchingPhotoMosaics.jpg",
+    "link": "https://henryla.notion.site/henryla/Project-4-Auto-stitching-and-Photo-Mosaics-5cdc3db7753f4a569be31dd19645bd1f"
+  },
+  "facialKeypointDetection": {
+    "id": "facialKeypointDetection",
+    "title": "Facial Keypoint Detection with Neural Networks",
+    "description": [
+      "Designed a convolutional neural network capable of detecting facial keypoints for images using PyTorch.",
+      "Optimized model by iteratively adjusting hyperparameters based on the training vs. validation loss."
+    ],
+    "image": "/src/assets/facialKeypointDetection.png",
+    "link": "https://henryla.notion.site/henryla/Project-5-Facial-Keypoint-Detection-with-Neural-Networks-b449fb4b790f4275824e0d0142048112"
+  },
+  "poorMansAugmentedReality": {
+    "id": "poorMansAugmentedReality",
+    "title": "Poor Man's Augmented Reality",
+    "description": [
+      "Developed a simple form of augmented reality by using OpenCV’s built-in trackers.",
+      "Inserted a synthetic object into the scene by computing the camera projection matrix for every frame."
+    ],
+    "image": "/src/assets/poorMansAugmentedReality.png",
+    "link": "https://henryla.notion.site/henryla/Final-Project-1-Poor-Man-s-Augmented-Reality-adac77af6c344828a3f04ff28ec575f3"
+  },
+  "lightFieldCamera": {
+    "id": "lightFieldCamera",
+    "title": "Light Field Camera",
+    "description": [
+      "Simulated the effects of light field cameras by shifting and averaging rectified images.",
+      "Implemented interactive depth refocusing using Gaussian pyramid image alignment."
+    ],
+    "image": "/src/assets/lightFieldCamera.png",
+    "link": "https://henryla.notion.site/henryla/Final-Project-2-Light-Field-Camera-2baa1b20b2764d4289d107f0c1218e82"
+  },
+  "voltz": {
+    "id": "voltz",
+    "title": "Voltz",
+    "description": [
+      "Completed a transportation-converter that displays the time and distances for different modes of transport.",
+      "Functionality created using JavaScript and webpage was stylized using CSS and Bootstrap."
+    ],
+    "image": "/src/assets/voltz.png",
+    "link": "https://youtu.be/Yad7eQpomLs?si=y3HJxX3InrWA47M2"
+  },
+  "storyScape": {
+    "id": "storyScape",
+    "title": "StoryScape",
+    "description": [
+      "Designed and developed a web app that uses ChatGPT and Dall-E to generate children stories.",
+      "Implemented OpenAI API calls and assisted with prompt engineering."
+    ],
+    "image": "/src/assets/storyScape.png",
+    "link": "https://youtu.be/8zRXgME0XCQ?si=dqHstapPxyKTN1AN"
   }
 }

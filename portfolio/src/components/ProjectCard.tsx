@@ -1,10 +1,9 @@
 import styled from "styled-components";
 import { Project } from "../variables/Types";
-import icon_github from "../assets/icon_github.png";
-import { useEffect, useState } from "react";
 
 // #region CSS
-const CardContainer = styled.div`
+const CardContainer = styled.a`
+  all: unset;
   align-items: center;
   background-color: #f1f6f9;
   border-radius: 25px;
@@ -14,7 +13,7 @@ const CardContainer = styled.div`
   gap: 20px;
   height: 200px;
   padding: 20px;
-  width: 600px;
+  width: 550px;
   /* border-bottom: 10px solid transparent; */
 
   box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.25);
@@ -36,15 +35,17 @@ const CardImage = styled.img`
 const TextContainer = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: left;
-  align-items: right;
+  gap: 10px;
 `;
 
 const CardTitle = styled.h2`
+  /* margin-bottom: 10px; */
   margin: 0;
 `;
 
-const DescriptionText = styled.p``;
+const DescriptionText = styled.p`
+  margin: 0;
+`;
 
 // #endregion
 
@@ -53,21 +54,25 @@ type props = {
 };
 
 export default function ProjectCard({ project }: props) {
-  const { id, image, title, description } = project;
+  const { id, image, title, description, link } = project;
 
-  const renderDescription = (description: string[]) => {
-    return description.map((line) => {
-      return <DescriptionText>{line}</DescriptionText>;
-    });
+  const renderDescription = () => {
+    return (
+      <>
+        {description.map((line) => {
+          return <DescriptionText>{line}</DescriptionText>;
+        })}
+      </>
+    );
   };
 
   return (
-    <CardContainer id={id}>
+    <CardContainer id={id} href={link}>
       <CardImage src={image} />
       <TextContainer>
         <CardTitle>{title}</CardTitle>
-        {/* {renderDescription(description)} */}
-        <DescriptionText>{description}</DescriptionText>
+        {renderDescription()}
+        {/* <DescriptionText>{description}</DescriptionText> */}
       </TextContainer>
     </CardContainer>
   );

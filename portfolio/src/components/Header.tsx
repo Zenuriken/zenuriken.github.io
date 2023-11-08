@@ -37,7 +37,7 @@ const LinkContainer = styled.div`
   justify-content: center;
   gap: 40px;
   padding: 0px 30px;
-  height: 100%;
+  height: 90%;
 `;
 
 const Link = styled.div<{ isCurrentPage: boolean }>`
