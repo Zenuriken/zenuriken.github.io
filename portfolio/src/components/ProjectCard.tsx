@@ -52,19 +52,21 @@ type props = {
   project: Project;
 };
 
-const IMAGE_DIR = "./../assets/";
-
 export default function ProjectCard({ project }: props) {
   const { id, image, title, description } = project;
 
-  const [imageSrc] = useState(IMAGE_DIR + image);
-  console.log(imageSrc);
+  const renderDescription = (description: string[]) => {
+    return description.map((line) => {
+      return <DescriptionText>{line}</DescriptionText>;
+    });
+  };
 
   return (
     <CardContainer id={id}>
-      <CardImage src={imageSrc} />
+      <CardImage src={image} />
       <TextContainer>
         <CardTitle>{title}</CardTitle>
+        {/* {renderDescription(description)} */}
         <DescriptionText>{description}</DescriptionText>
       </TextContainer>
     </CardContainer>

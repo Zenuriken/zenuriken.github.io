@@ -53,32 +53,17 @@ export default function ProjectsPage() {
       />
       <Title id="computerGraphics">Computer Graphics (C++)</Title>
       <ProjectCardContainer>
-        <ProjectCard project={projects.myProject} />
-        <ProjectCard project={projects.myProject} />
-        <ProjectCard project={projects.myProject} />
-        <ProjectCard project={projects.myProject} />
+        <ProjectCard project={projects.rasterizer} />
+        <ProjectCard project={projects.meshEdit} />
+        <ProjectCard project={projects.pathTracer} />
+        <ProjectCard project={projects.pathTracer2} />
       </ProjectCardContainer>
       <Title id="computerVision">Computer Vision (Python)</Title>
-      <ProjectCardContainer>
-        <ProjectCard project={projects.myProject} />
-        <ProjectCard project={projects.myProject} />
-        <ProjectCard project={projects.myProject} />
-        <ProjectCard project={projects.myProject} />
-      </ProjectCardContainer>
+      <ProjectCardContainer></ProjectCardContainer>
       <Title id="userInterfaces">User Interfaces (Java, CSS, HTML)</Title>
-      <ProjectCardContainer>
-        <ProjectCard project={projects.myProject} />
-        <ProjectCard project={projects.myProject} />
-        <ProjectCard project={projects.myProject} />
-        <ProjectCard project={projects.myProject} />
-      </ProjectCardContainer>
+      <ProjectCardContainer></ProjectCardContainer>
       <Title id="fullStack">Full Stack (React, Typescript, CSS)</Title>
-      <ProjectCardContainer>
-        <ProjectCard project={projects.myProject} />
-        <ProjectCard project={projects.myProject} />
-        <ProjectCard project={projects.myProject} />
-        <ProjectCard project={projects.myProject} />
-      </ProjectCardContainer>
+      <ProjectCardContainer></ProjectCardContainer>
     </ProjectPageContainer>
   );
 }

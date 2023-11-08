@@ -1,16 +1,42 @@
 {
-  "myProject": {
-    "id": "my-project",
-    "title": "My Project",
-    "description": "My Project Description",
-    "image": "icon_github.png",
-    "link": "https://www.google.com/"
+  "rasterizer": {
+    "id": "rasterizer",
+    "title": "Rasterizer",
+    "description": [
+      "Implemented a rasterizer that converts Scalable Vector Graphic (SVG) files into pixeled images.",
+      "Tested various methods of pixel sampling for texture mapping."
+    ],
+    "image": "/src/assets/rasterizer.png",
+    "link": "https://cal-cs184-student.github.io/sp22-project-webpages-Zenuriken/proj1/index.html"
   },
-  "myProject2": {
-    "id": "my-project-2",
-    "title": "My Project 2",
-    "description": "My Project 2 Description",
-    "image": "My Name",
-    "link": ""
+  "meshEdit": {
+    "id": "meshEdit",
+    "title": "Mesh Edit",
+    "description": [
+      "Simulated the physics of cloth by creating a mesh of springs and point masses.",
+      "Used verlet integration and other formulas to compute new positions."
+    ],
+    "image": "/src/assets/meshEdit.png",
+    "link": "https://cal-cs184-student.github.io/sp22-project-webpages-Zenuriken/proj2/index.html"
+  },
+  "pathTracer": {
+    "id": "pathTracer",
+    "title": "Pathtracer",
+    "description": [
+      "Produced renderings of 3D environments using ray intersections and bounding volume hierarchies.",
+      "Added support for direct and global illumination using Monte Carlo Path Tracing."
+    ],
+    "image": "/src/assets/pathtracer.png",
+    "link": "https://cal-cs184-student.github.io/sp22-project-webpages-Zenuriken/proj3-1/index.html"
+  },
+  "pathTracer2": {
+    "id": "pathTracer2",
+    "title": "Pathtracer 2",
+    "description": [
+      "Simulated mirror and glass materials in a 3D environment using ray refraction/reflection.",
+      "Completed a thin-lens model capable of depth refocusing using ray intersections."
+    ],
+    "image": "/src/assets/pathtracer2.png",
+    "link": "https://cal-cs184-student.github.io/sp22-project-webpages-Zenuriken/proj3-2/index.html"
   }
 }
