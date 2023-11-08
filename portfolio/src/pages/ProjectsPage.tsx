@@ -57,9 +57,14 @@ export default function ProjectsPage() {
         <ProjectCard project={projects.meshEdit} />
         <ProjectCard project={projects.pathTracer} />
         <ProjectCard project={projects.pathTracer2} />
+        <ProjectCard project={projects.clothSimulator} />
+        <ProjectCard project={projects.celShading} />
       </ProjectCardContainer>
       <Title id="computerVision">Computer Vision (Python)</Title>
-      <ProjectCardContainer></ProjectCardContainer>
+      <ProjectCardContainer>
+        <ProjectCard project={projects.colorizing} />
+        <ProjectCard project={projects.filtersAndFrequencies} />
+      </ProjectCardContainer>
       <Title id="userInterfaces">User Interfaces (Java, CSS, HTML)</Title>
       <ProjectCardContainer></ProjectCardContainer>
       <Title id="fullStack">Full Stack (React, Typescript, CSS)</Title>

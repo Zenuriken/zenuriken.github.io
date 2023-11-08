@@ -38,5 +38,45 @@
     ],
     "image": "/src/assets/pathtracer2.png",
     "link": "https://cal-cs184-student.github.io/sp22-project-webpages-Zenuriken/proj3-2/index.html"
+  },
+  "clothSimulator": {
+    "id": "clothSimulator",
+    "title": "Cloth Simulator",
+    "description": [
+      "Simulated the physics of cloth by constructing a mesh of spring and point mass data structures.",
+      "Applied texture and displacement mapping using vertex and fragment shaders in GLSL."
+    ],
+    "image": "/src/assets/clothSimulator.png",
+    "link": "https://cal-cs184-student.github.io/sp22-project-webpages-Zenuriken/proj4/index.html"
+  },
+  "celShading": {
+    "id": "celShading",
+    "title": "Cel Shading",
+    "description": [
+      "Produced and applied cel-shading to 3D models using Unity’s built-in shader API.",
+      "Animated 3D models using blend trees and programmed basic combat system."
+    ],
+    "image": "/src/assets/celShading.png",
+    "link": "https://cal-cs184-student.github.io/sp22-project-webpages-Zenuriken/proj-final/index.html"
+  },
+  "colorizing": {
+    "id": "colorizing",
+    "title": "Colorizing the Prokudin-Gorskii Photo Collection",
+    "description": [
+      "Aligned colored-separated images using coarse-to-fine image pyramids.",
+      "Computed L2 norm over rescaled images as a metric for alignment."
+    ],
+    "image": "/src/assets/colorizing.jpg",
+    "link": "https://henryla.notion.site/henryla/Project-1-Images-of-the-Russian-Empire-Colorizing-the-Prokudin-Gorskii-Photo-Collection-b24b610cba5a4bcc848d3c165c113081"
+  },
+  "filtersAndFrequencies": {
+    "id": "filtersAndFrequencies",
+    "title": "Fun with Filters And Frequencies",
+    "description": [
+      "Formed hybrid images by combining the low pass and high pass filters of images.",
+      "Completed a multi-resolution blending algorithm using Gaussian and Laplacian stacks."
+    ],
+    "image": "/src/assets/filtersAndFrequencies.jpg",
+    "link": "https://henryla.notion.site/henryla/Project-2-Fun-with-Filters-and-Frequencies-850f2fd8088248098dc8962fe57912b4"
   }
 }
