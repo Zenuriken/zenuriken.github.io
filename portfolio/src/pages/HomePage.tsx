@@ -6,11 +6,11 @@ import icon_mail from "./../assets/icon_mail.png";
 
 // #region CSS
 const HomePageContainer = styled.div`
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   height: 100vh;
+  justify-content: center;
   width: 100vw;
 `;
 
@@ -25,8 +25,8 @@ const IconRow = styled.div`
   display: flex;
   flex-direction: row;
   gap: 100px;
-  margin: 0px;
   height: 200px;
+  margin: 0px;
 `;
 
 const Column = styled.div`
@@ -58,28 +58,28 @@ const Subtitle = styled.h2`
 `;
 
 const ImageContainer = styled.div`
-  display: flex;
-  justify-content: center;
   align-items: center;
-  width: 200px;
-  height: 200px;
   border-radius: 50%;
+  display: flex;
+  height: 200px;
+  justify-content: center;
   overflow: hidden;
+  width: 200px;
 `;
 
 const Image = styled.img`
-  width: 100%;
   height: auto;
+  width: 100%;
 `;
 
 const IconContainer = styled.a`
-  display: flex;
-  justify-content: center;
   align-items: center;
-  width: 50px;
+  display: flex;
   height: 50px;
+  justify-content: center;
   overflow: hidden;
   transition-duration: 0.5s;
+  width: 50px;
 
   &:hover {
     cursor: pointer;

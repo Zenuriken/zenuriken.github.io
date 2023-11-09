@@ -3,10 +3,11 @@ import { Project } from "../variables/Types";
 
 // #region CSS
 const CardContainer = styled.a`
-  all: unset;
   align-items: center;
+  all: unset;
   background-color: #f1f6f9;
   border-radius: 25px;
+  box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.25);
   display: flex;
   flex-direction: row;
   flex-shrink: 0;
@@ -14,36 +15,32 @@ const CardContainer = styled.a`
   height: 200px;
   padding: 20px;
   width: 550px;
-  /* border-bottom: 10px solid transparent; */
-
-  box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.25);
 
   &:hover {
-    /* background-color: #d7dbde; */
-    box-shadow: 0px 5px 25px 5px rgba(0, 0, 0, 0.25);
-    /* border-bottom: 10px solid #394867; */
     background-color: #e0e6e9;
+    box-shadow: 0px 5px 25px 5px rgba(0, 0, 0, 0.25);
     cursor: pointer;
   }
 `;
 
 const CardImage = styled.img`
-  max-width: 300px;
   height: 200px;
+  max-width: 300px;
 `;
 
 const TextContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 10px;
+  justify-content: center;
 `;
 
 const CardTitle = styled.h2`
-  /* margin-bottom: 10px; */
   margin: 0;
 `;
 
 const DescriptionText = styled.p`
+  color: #343434;
   margin: 0;
 `;
 
@@ -72,7 +69,6 @@ export default function ProjectCard({ project }: props) {
       <TextContainer>
         <CardTitle>{title}</CardTitle>
         {renderDescription()}
-        {/* <DescriptionText>{description}</DescriptionText> */}
       </TextContainer>
     </CardContainer>
   );

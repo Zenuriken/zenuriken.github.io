@@ -10,8 +10,8 @@ const ProjectPageContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 20px;
-  margin-left: 350px;
   margin-bottom: 175px;
+  margin-left: 350px;
   padding-top: 100px;
   width: 1400px;
 `;
@@ -22,20 +22,15 @@ const Title = styled.h1`
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  /* margin: 0; */
-  width: 100%;
   text-align: left;
-  /* padding-left: 750px; */
+  width: 100%;
 `;
 
 const ProjectCardContainer = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  /* justify-content: flex-start; */
-  /* align-items: flex-start; */
   gap: 50px;
-  /* padding-left: 260px; */
   margin-bottom: 75px;
 `;
 // #endregion

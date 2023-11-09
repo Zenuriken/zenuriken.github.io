@@ -148,5 +148,64 @@
     ],
     "image": "/src/assets/storyScape.png",
     "link": "https://youtu.be/8zRXgME0XCQ?si=dqHstapPxyKTN1AN"
+  },
+  "ghostOfViridia": {
+    "id": "ghostOfViridia",
+    "title": "Ghost of Viridia",
+    "description": [
+      "Assassinate the people you once called heroes and uncover the hidden truth of Viridia's past."
+    ],
+    "image": "/src/assets/ghostOfViridia.png",
+    "link": "https://zenuriken.itch.io/ghost-of-viridia"
+  },
+  "totallyNotDoom": {
+    "id": "totallyNotDoom",
+    "title": "Totally Not Doom",
+    "description": ["A tech demo for 3D cel-shading in Unity"],
+    "image": "/src/assets/totallyNotDoom.png",
+    "link": "https://zenuriken.itch.io/totally-not-doom"
+  },
+  "bearsBobaria": {
+    "id": "bearsBobaria",
+    "title": "Bear's Bobaria",
+    "description": [
+      "Welcome to your boba shop! Mix and match a variety of tea, ingredients, and toppings to create delicious drinks."
+    ],
+    "image": "/src/assets/bearsBobaria.png",
+    "link": "https://zenuriken.itch.io/bears-bobaria"
+  },
+  "metal": {
+    "id": "metal",
+    "title": "[ME][TA]L",
+    "description": [
+      "[ME][TA]L is a rhythm game revolving around, you guessed it, metal! But it's not like your average rhythm game, so be careful. >:)"
+    ],
+    "image": "/src/assets/metal.png",
+    "link": "https://penguinies.itch.io/metal"
+  },
+  "dontWakeUp": {
+    "id": "dontWakeUp",
+    "title": "Don't Wake Up",
+    "description": [
+      "A horror game where you help a girl wake up from her nightmares."
+    ],
+    "image": "/src/assets/dontWakeUp.png",
+    "link": "https://rosenbleu.itch.io/dont-wake-up"
+  },
+  "slimeAttack": {
+    "id": "slimeAttack",
+    "title": "Slime Attack",
+    "description": ["2D Platformer where you play as a slime"],
+    "image": "/src/assets/slimeAttack.png",
+    "link": "https://kevponce4.itch.io/slime-attack"
+  },
+  "polyDrome": {
+    "id": "polyDrome",
+    "title": "Polydrome",
+    "description": [
+      "You act as a brave polygon, trying to protect your edges from being robbed by the zombie polygons - zolygons."
+    ],
+    "image": "/src/assets/polyDrome.png",
+    "link": "https://guardhei.itch.io/polydrome"
   }
 }

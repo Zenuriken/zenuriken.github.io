@@ -5,20 +5,18 @@ import { useEffect, useState } from "react";
 // #region CSS
 const SideNavContainer = styled.div`
   align-items: center;
-  /* background-color: rgba(33, 42, 62, 0.75); */
-  /* box-shadow: 0px 5px 20px 5px rgba(0, 0, 0, 0.25); */
   border-right: 2px solid #9ba4b5;
   display: flex;
   flex-direction: column;
-  position: fixed;
-  left: 0px;
+  flex-grow: 0;
+  gap: 20px;
   height: 100%;
+  left: 0px;
+  padding: 50px 0px;
+  position: fixed;
+  top: 55px;
   width: 250px;
   z-index: 0;
-  gap: 20px;
-  top: 55px;
-  padding: 50px 0px;
-  flex-grow: 0;
 `;
 
 const Link = styled.div<{ isCurrentSection: boolean }>`

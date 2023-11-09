@@ -4,6 +4,7 @@ import { useState } from "react";
 import HomePage from "./pages/HomePage";
 import { Page } from "./variables/Types";
 import ProjectsPage from "./pages/ProjectsPage";
+import GamesPage from "./pages/GamesPage";
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState(Page.HOME);
@@ -17,7 +18,7 @@ export default function App() {
       case Page.PROJECTS:
         return <ProjectsPage />;
       case Page.GAMES:
-        return <div>Games</div>;
+        return <GamesPage />;
       default:
         return <HomePage />;
     }
