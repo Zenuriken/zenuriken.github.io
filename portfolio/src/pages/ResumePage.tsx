@@ -1,9 +1,10 @@
 import styled from "styled-components";
 import SideNav from "../components/ProjectsSideNav";
-import { ProjectSection } from "../variables/Types";
+import { ProjectSection, ResumeSection } from "../variables/Types";
 import { useState } from "react";
 import ProjectCard from "../components/ProjectCard";
 import projects from "../data/projects.json";
+import ResumeSideNav from "../components/ResumeSideNav";
 
 // #region CSS
 const ProjectPageContainer = styled.div`
@@ -36,17 +37,17 @@ const ProjectCardContainer = styled.div`
 // #endregion
 
 export default function ProjectsPage() {
-  const [currProjectSection, setCurrProjectSection] = useState(
-    ProjectSection.COMPUTERGRAPHICS
+  const [currResumeSection, setCurrResumeSection] = useState(
+    ResumeSection.EDUCATION
   );
 
   return (
     <ProjectPageContainer>
-      <SideNav
-        currProjectSection={currProjectSection}
-        setCurrProjectSection={setCurrProjectSection}
+      <ResumeSideNav
+        currResumeSection={currResumeSection}
+        setCurrResumeSection={setCurrResumeSection}
       />
-      <Title id="computerGraphics">Computer Graphics (C++)</Title>
+      <Title id="education">Education</Title>
       <ProjectCardContainer>
         <ProjectCard project={projects.rasterizer} />
         <ProjectCard project={projects.meshEdit} />
@@ -55,7 +56,7 @@ export default function ProjectsPage() {
         <ProjectCard project={projects.clothSimulator} />
         <ProjectCard project={projects.celShading} />
       </ProjectCardContainer>
-      <Title id="computerVision">Computer Vision (Python)</Title>
+      <Title id="experience">Experience</Title>
       <ProjectCardContainer>
         <ProjectCard project={projects.colorizing} />
         <ProjectCard project={projects.filtersAndFrequencies} />
@@ -65,13 +66,11 @@ export default function ProjectsPage() {
         <ProjectCard project={projects.poorMansAugmentedReality} />
         <ProjectCard project={projects.lightFieldCamera} />
       </ProjectCardContainer>
-      <Title id="userInterfaces">User Interfaces (Java, CSS, HTML)</Title>
+      <Title id="skills">Skills</Title>
       <ProjectCardContainer>
         <ProjectCard project={projects.voltz} />
         <ProjectCard project={projects.storyScape} />
       </ProjectCardContainer>
-      <Title id="fullStack">Full Stack (React, Typescript, CSS)</Title>
-      <ProjectCardContainer></ProjectCardContainer>
     </ProjectPageContainer>
   );
 }

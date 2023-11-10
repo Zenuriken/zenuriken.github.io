@@ -1,7 +1,4 @@
 import styled from "styled-components";
-import SideNav from "../components/SideNav";
-import { Section } from "../variables/Types";
-import { useState } from "react";
 import ProjectCard from "../components/ProjectCard";
 import projects from "../data/projects.json";
 
@@ -36,10 +33,6 @@ const ProjectCardContainer = styled.div`
 // #endregion
 
 export default function ProjectsPage() {
-  const [currentSection, setCurrentSection] = useState(
-    Section.COMPUTERGRAPHICS
-  );
-
   return (
     <ProjectPageContainer>
       <Title id="computerGraphics">Play Some of My Video Games!</Title>
@@ -55,7 +48,6 @@ export default function ProjectsPage() {
         <ProjectCard project={projects.slimeAttack} />
         <ProjectCard project={projects.polyDrome} />
       </ProjectCardContainer>
-      <ProjectCardContainer></ProjectCardContainer>
     </ProjectPageContainer>
   );
 }

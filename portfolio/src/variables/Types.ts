@@ -30,11 +30,22 @@ export enum Page {
 }
 
 // Holds the values of all the different pages.
-export enum Section {
+export enum ProjectSection {
   COMPUTERGRAPHICS = "computerGraphics",
   COMPUTERVISION = "computerVision",
   USERINTERFACES = "userInterfaces",
   FULLSTACK = "fullStack",
+}
+
+export enum ResumeSection {
+  EDUCATION = "education",
+  EXPERIENCE = "experience",
+  SKILLS = "skills",
+}
+
+export enum GameSection {
+  MYGAMES = "games",
+  OTHERGAMES = "otherGames",
 }
 
 export type Project = {

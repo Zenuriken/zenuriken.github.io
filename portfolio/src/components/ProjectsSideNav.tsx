@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Section } from "../variables/Types";
+import { ProjectSection } from "../variables/Types";
 import { useEffect, useState } from "react";
 
 // #region CSS
@@ -19,15 +19,16 @@ const SideNavContainer = styled.div`
   z-index: 0;
 `;
 
-const Link = styled.div<{ isCurrentSection: boolean }>`
+const Link = styled.div<{ isCurrentProjectSection: boolean }>`
   color: #f1f6f9;
   font-size: 20px;
   width: 100%;
 
-  pointer-events: ${(props) => (props.isCurrentSection ? "none" : "auto")};
-  color: ${(props) => (props.isCurrentSection ? "#000000" : "#f1f6f9")};
+  pointer-events: ${(props) =>
+    props.isCurrentProjectSection ? "none" : "auto"};
+  color: ${(props) => (props.isCurrentProjectSection ? "#000000" : "#f1f6f9")};
   background-image: ${(props) =>
-    props.isCurrentSection
+    props.isCurrentProjectSection
       ? "linear-gradient(90deg, #394867 0%, #9ba4b5 100%)"
       : "none"};
 
@@ -44,22 +45,25 @@ const LinkText = styled.p`
 // #endregion
 
 type props = {
-  currentSection: Section;
-  setCurrentSection: (section: Section) => void;
+  currProjectSection: ProjectSection;
+  setCurrProjectSection: (projectSection: ProjectSection) => void;
 };
 
-export default function SideNav({ currentSection, setCurrentSection }: props) {
+export default function SideNav({
+  currProjectSection,
+  setCurrProjectSection,
+}: props) {
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
       if (scrollY < 330) {
-        setCurrentSection(Section.COMPUTERGRAPHICS);
+        setCurrProjectSection(ProjectSection.COMPUTERGRAPHICS);
       } else if (scrollY < 1030) {
-        setCurrentSection(Section.COMPUTERVISION);
+        setCurrProjectSection(ProjectSection.COMPUTERVISION);
       } else if (scrollY < 1730) {
-        setCurrentSection(Section.USERINTERFACES);
+        setCurrProjectSection(ProjectSection.USERINTERFACES);
       } else {
-        setCurrentSection(Section.FULLSTACK);
+        setCurrProjectSection(ProjectSection.FULLSTACK);
       }
       // console.log("Scroll pos: " + scrollY);
     };
@@ -85,33 +89,41 @@ export default function SideNav({ currentSection, setCurrentSection }: props) {
     });
   };
 
-  const onSectionChange = (section: Section) => {
-    scrollToTarget(section);
+  const onProjectSectionChange = (projectSection: ProjectSection) => {
+    scrollToTarget(projectSection);
   };
 
   return (
     <SideNavContainer>
       <Link
-        isCurrentSection={currentSection === Section.COMPUTERGRAPHICS}
-        onClick={() => onSectionChange(Section.COMPUTERGRAPHICS)}
+        isCurrentProjectSection={
+          currProjectSection === ProjectSection.COMPUTERGRAPHICS
+        }
+        onClick={() => onProjectSectionChange(ProjectSection.COMPUTERGRAPHICS)}
       >
         <LinkText>Computer Graphics</LinkText>
       </Link>
       <Link
-        isCurrentSection={currentSection === Section.COMPUTERVISION}
-        onClick={() => onSectionChange(Section.COMPUTERVISION)}
+        isCurrentProjectSection={
+          currProjectSection === ProjectSection.COMPUTERVISION
+        }
+        onClick={() => onProjectSectionChange(ProjectSection.COMPUTERVISION)}
       >
         <LinkText>Computer Vision</LinkText>
       </Link>
       <Link
-        isCurrentSection={currentSection === Section.USERINTERFACES}
-        onClick={() => onSectionChange(Section.USERINTERFACES)}
+        isCurrentProjectSection={
+          currProjectSection === ProjectSection.USERINTERFACES
+        }
+        onClick={() => onProjectSectionChange(ProjectSection.USERINTERFACES)}
       >
         <LinkText>User Interfaces</LinkText>
       </Link>
       <Link
-        isCurrentSection={currentSection === Section.FULLSTACK}
-        onClick={() => onSectionChange(Section.FULLSTACK)}
+        isCurrentProjectSection={
+          currProjectSection === ProjectSection.FULLSTACK
+        }
+        onClick={() => onProjectSectionChange(ProjectSection.FULLSTACK)}
       >
         <LinkText>Full Stack</LinkText>
       </Link>
