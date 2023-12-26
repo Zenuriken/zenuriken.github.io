@@ -33,8 +33,7 @@ export enum Page {
 export enum ProjectSection {
   COMPUTERGRAPHICS = "computerGraphics",
   COMPUTERVISION = "computerVision",
-  USERINTERFACES = "userInterfaces",
-  FULLSTACK = "fullStack",
+  WEBDEVELOPMENT = "webDevelopment",
 }
 
 export enum ResumeSection {

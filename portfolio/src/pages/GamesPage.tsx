@@ -45,7 +45,6 @@ export default function ProjectsPage() {
       <ProjectCardContainer>
         <ProjectCard project={projects.metal} />
         <ProjectCard project={projects.dontWakeUp} />
-        <ProjectCard project={projects.slimeAttack} />
         <ProjectCard project={projects.polyDrome} />
       </ProjectCardContainer>
     </ProjectPageContainer>

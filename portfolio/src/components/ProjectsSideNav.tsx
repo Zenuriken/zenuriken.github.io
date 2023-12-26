@@ -60,10 +60,8 @@ export default function SideNav({
         setCurrProjectSection(ProjectSection.COMPUTERGRAPHICS);
       } else if (scrollY < 1030) {
         setCurrProjectSection(ProjectSection.COMPUTERVISION);
-      } else if (scrollY < 1730) {
-        setCurrProjectSection(ProjectSection.USERINTERFACES);
       } else {
-        setCurrProjectSection(ProjectSection.FULLSTACK);
+        setCurrProjectSection(ProjectSection.WEBDEVELOPMENT);
       }
       // console.log("Scroll pos: " + scrollY);
     };
@@ -113,19 +111,11 @@ export default function SideNav({
       </Link>
       <Link
         isCurrentProjectSection={
-          currProjectSection === ProjectSection.USERINTERFACES
+          currProjectSection === ProjectSection.WEBDEVELOPMENT
         }
-        onClick={() => onProjectSectionChange(ProjectSection.USERINTERFACES)}
+        onClick={() => onProjectSectionChange(ProjectSection.WEBDEVELOPMENT)}
       >
-        <LinkText>User Interfaces</LinkText>
-      </Link>
-      <Link
-        isCurrentProjectSection={
-          currProjectSection === ProjectSection.FULLSTACK
-        }
-        onClick={() => onProjectSectionChange(ProjectSection.FULLSTACK)}
-      >
-        <LinkText>Full Stack</LinkText>
+        <LinkText>Web Development</LinkText>
       </Link>
     </SideNavContainer>
   );

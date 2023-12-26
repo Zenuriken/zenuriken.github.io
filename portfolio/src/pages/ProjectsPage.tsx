@@ -65,13 +65,11 @@ export default function ProjectsPage() {
         <ProjectCard project={projects.poorMansAugmentedReality} />
         <ProjectCard project={projects.lightFieldCamera} />
       </ProjectCardContainer>
-      <Title id="userInterfaces">User Interfaces (Java, CSS, HTML)</Title>
+      <Title id="webDevelopment">Web Development (Java, CSS, HTML, React, Typescript)</Title>
       <ProjectCardContainer>
         <ProjectCard project={projects.voltz} />
         <ProjectCard project={projects.storyScape} />
       </ProjectCardContainer>
-      <Title id="fullStack">Full Stack (React, Typescript, CSS)</Title>
-      <ProjectCardContainer></ProjectCardContainer>
     </ProjectPageContainer>
   );
 }

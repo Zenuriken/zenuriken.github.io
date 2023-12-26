@@ -1,10 +1,32 @@
 import styled from "styled-components";
+import { keyframes } from 'styled-components'
 import profile from "./../assets/profile.jpg";
 import icon_github from "./../assets/icon_github.png";
 import icon_linkedin from "./../assets/icon_linkedin.png";
 import icon_mail from "./../assets/icon_mail.png";
 
 // #region CSS
+const fadeInAnimation = keyframes`
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+`;
+
+/* The typing effect */
+const typing = keyframes`
+  from { width: 0 }
+  to { width: 80% }
+`;
+
+/* The typewriter cursor effect */
+const blinkCaret = keyframes`
+  from, to { border-color: transparent }
+  50% { border-color: white; }
+`;
+
 const HomePageContainer = styled.div`
   align-items: center;
   display: flex;
@@ -45,6 +67,11 @@ const Title = styled.h1`
   line-height: normal;
   margin: 0;
   text-align: left;
+
+
+  animation: ${fadeInAnimation} ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 `;
 
 const Subtitle = styled.h2`
@@ -53,8 +80,16 @@ const Subtitle = styled.h2`
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  margin: 0;
-  text-align: left;
+  text-align: center;
+
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    ${typing} 2s steps(24, end),
+    ${blinkCaret} .75s step-end infinite;
 `;
 
 const ImageContainer = styled.div`
@@ -70,6 +105,10 @@ const ImageContainer = styled.div`
 const Image = styled.img`
   height: auto;
   width: 100%;
+
+  animation: ${fadeInAnimation} ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 `;
 
 const IconContainer = styled.a`
@@ -85,6 +124,10 @@ const IconContainer = styled.a`
     cursor: pointer;
     transform: scale(1.5);
   }
+
+  animation: ${fadeInAnimation} ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 `;
 // #endregion
 
