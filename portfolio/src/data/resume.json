@@ -1,0 +1,104 @@
+{
+    "experience": [
+        {
+            "id": "quizlet",
+            "position": "Games Engineer Assistant",
+            "company": "Quizlet",
+            "years": "May 2023 - Present",
+            "location": "San Francisco, CA",
+            "logo": "quizlet-logo.png",
+            "description": [
+                "Collaborate with product managers, designers, and engineers on designing new games for Quizlet.",
+                "Provide supplementary materials and technical support for Quizlet’s Game On! Contest.",
+                "Present student-user feedback for new AI-driven Quizlet features.",
+                "Assist in the migration of Quizlet pages to Next.js."
+            ]
+        },
+        {
+            "id": "gdd",
+            "position": "Lead Facilitator",
+            "company": "Game Design and Development DeCal at UC Berkeley",
+            "years": "December 2022 - Present",
+            "location": "Berkeley, CA",
+            "logo": "berkeley-logo.png",
+            "description": [
+                "Facilitate a class that teaches UC Berkeley students game development using Unity.",
+                "Lead weekly facilitator meetings to discuss course logistics and assign tasks.",
+                "Provide guidance and lecture reviews to course staff to ensure proper instruction.",
+                "Develop and migrate course content to our new website: gamedesigndecal.com"
+            ]
+        },
+        {
+            "id": "healingHandTech",
+            "position": "Lead Game Design Intern",
+            "company": "HealingHand Tech",
+            "years": "May 2023 - August 2023",
+            "location": "Dublin, Ireland",
+            "logo": "healingHandTech-logo.png",
+            "description": [
+                "Lead a game design team to develop and refine game concepts, mechanics, and systems.",
+                "Helped coordinate and manage the game development pipeline, ensuring timely completion of tasks.",
+                "Worked closely with team members to ensure cohesive and immersive gameplay experiences.",
+                "Organized and contributed to cross-functional design discussions with the UI/UX team."
+            ]
+        }
+    ],
+    "education": {
+        "id": "ucBerkeley",
+        "degree": "Bachelor of Arts",
+        "major": "Computer Science",
+        "years": "August 2020 - May 2024",
+        "location": "Berkeley, CA",
+        "logo": "berkeley-logo.png",
+        "gpa": "3.64 / 4.0",
+        "courseWork": [
+            "Artificial Intelligence",
+            "Computer Graphics",
+            "Computer Vision",
+            "Data Science",
+            "Data Structures", 
+            "Discrete Mathematics and Probability Theory",
+            "Internet Architecture and Protocols",
+            "Linear Algebra",
+            "Machine Structures",
+            "User Interfaces",
+            "Video Game Design and Development",
+            "XR Development"
+        ]
+    },
+    "skills": {
+        "languages": [
+            "C",
+            "C#",
+            "C++",
+            "CSS",
+            "HTML",
+            "Java",
+            "JavaScript",
+            "Python",
+            "SQL",
+            "TypeScript"
+        ],
+        "frameworks": [
+            "Next.js",
+            "Node.js",
+            "PyTorch",
+            "React",
+            "Roblox",
+            "Unity"
+        ],
+        "tools": [
+            "Illustrator",
+            "Figma",
+            "Git",
+            "GitHub",
+            "GitPods",
+            "Google Colab",
+            "IntelliJ",
+            "Jupyter Notebook",
+            "Maya",
+            "Visual Studios",
+            "VS Code"
+        ]
+    }
+}

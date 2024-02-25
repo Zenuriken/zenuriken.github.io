@@ -6,6 +6,9 @@ import { Page } from "./variables/Types";
 import ProjectsPage from "./pages/ProjectsPage";
 import GamesPage from "./pages/GamesPage";
 import styled from "styled-components";
+import ResumePage from "./pages/ResumePage";
+import SideNav from "./sideNavs/SideNav";
+import { render } from "react-dom";
 
 const PageContainer = styled.div`
   align-items: center;
@@ -16,12 +19,21 @@ const PageContainer = styled.div`
 export default function App() {
   const [currentPage, setCurrentPage] = useState(Page.HOME);
 
+  const renderHeader = () => {
+    return <Header currentPage={currentPage} setCurrentPage={setCurrentPage} />;
+  }
+
+  const renderSideNav = () => {
+    if (currentPage === Page.HOME) return null;
+    return <SideNav currentPage={currentPage} setCurrentPage={setCurrentPage} />;
+  }
+
   const renderPage = () => {
     switch (currentPage) {
       case Page.HOME:
         return <HomePage />;
       case Page.RESUME:
-        return <div> Resume </div>;
+        return <ResumePage/>;
       case Page.PROJECTS:
         return <ProjectsPage />;
       case Page.GAMES:
@@ -33,7 +45,8 @@ export default function App() {
 
   return (
     <PageContainer>
-      <Header currentPage={currentPage} setCurrentPage={setCurrentPage} />
+      {renderHeader()}
+      {renderSideNav()}
       {renderPage()}
     </PageContainer>
   );

@@ -1,10 +1,8 @@
 import styled from "styled-components";
-import SideNav from "../sideNavs/ProjectsSideNav";
-import { ProjectSection, ResumeSection } from "../variables/Types";
-import { useState } from "react";
-import ProjectCard from "../components/Card";
-import projects from "../data/projects.json";
 import ResumeSideNav from "../sideNavs/ResumeSideNav";
+import { ResumeSection } from "../variables/Types";
+import { useState } from "react";
+import resume from "../data/resume.json";
 
 // #region CSS
 const ProjectPageContainer = styled.div`
@@ -36,10 +34,44 @@ const ProjectCardContainer = styled.div`
 `;
 // #endregion
 
-export default function ProjectsPage() {
+export default function ResumePage() {
   const [currResumeSection, setCurrResumeSection] = useState(
     ResumeSection.EDUCATION
   );
+
+  const renderEducationSection = () => {
+    const {id, degree, major, years, location, logo, gpa, courseWork} = resume.education;
+    return (
+      <>
+        <Title id="education">Education</Title>
+        <div>{degree}</div>
+        <div>{major}</div>
+        <div>{years}</div>
+        <div>{location}</div>
+        <div>{logo}</div>
+        <div>{gpa}</div>
+        <div>{courseWork.map(course => {
+          return <div>{course}</div>
+        })}</div>
+      </>
+    )
+  };
+
+  const renderExperienceSection = () => {
+    return (
+      <>
+        <Title id="experience">Experience</Title>
+      </>
+    )
+  }
+
+  const renderSkillsSection = () => {
+    return (
+      <>
+        <Title id="skills">Skills</Title>
+      </>
+    )
+  }
 
   return (
     <ProjectPageContainer>
@@ -47,30 +79,9 @@ export default function ProjectsPage() {
         currResumeSection={currResumeSection}
         setCurrResumeSection={setCurrResumeSection}
       />
-      <Title id="education">Education</Title>
-      <ProjectCardContainer>
-        <ProjectCard project={projects.rasterizer} />
-        <ProjectCard project={projects.meshEdit} />
-        <ProjectCard project={projects.pathTracer} />
-        <ProjectCard project={projects.pathTracer2} />
-        <ProjectCard project={projects.clothSimulator} />
-        <ProjectCard project={projects.celShading} />
-      </ProjectCardContainer>
-      <Title id="experience">Experience</Title>
-      <ProjectCardContainer>
-        <ProjectCard project={projects.colorizing} />
-        <ProjectCard project={projects.filtersAndFrequencies} />
-        <ProjectCard project={projects.faceMorphing} />
-        <ProjectCard project={projects.autostitchingPhotoMosaics} />
-        <ProjectCard project={projects.facialKeypointDetection} />
-        <ProjectCard project={projects.poorMansAugmentedReality} />
-        <ProjectCard project={projects.lightFieldCamera} />
-      </ProjectCardContainer>
-      <Title id="skills">Skills</Title>
-      <ProjectCardContainer>
-        <ProjectCard project={projects.voltz} />
-        <ProjectCard project={projects.storyScape} />
-      </ProjectCardContainer>
+      {renderEducationSection()}
+      {renderExperienceSection()}
+      {renderSkillsSection()}
     </ProjectPageContainer>
   );
 }

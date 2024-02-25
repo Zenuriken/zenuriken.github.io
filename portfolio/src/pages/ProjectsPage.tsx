@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import SideNav from "../sideNavs/ProjectsSideNav";
+import ProjectSideNav from "../sideNavs/ProjectSideNav";
 import { Project, ProjectSection } from "../variables/Types";
 import { useState } from "react";
 import Card from "../components/Card";
@@ -60,7 +60,7 @@ export default function ProjectsPage() {
 
   return (
     <ProjectPageContainer>
-      <SideNav
+      <ProjectSideNav
         currProjectSection={currProjectSection}
         setCurrProjectSection={setCurrProjectSection}
       />

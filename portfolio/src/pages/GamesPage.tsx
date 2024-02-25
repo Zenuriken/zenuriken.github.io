@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Card from "../components/Card";
 import projects from "../data/projects.json";
-import GameSideNav from "../sideNavs/GamesSideNav";
+import GameSideNav from "../sideNavs/GameSideNav";
 import { useState } from "react";
 import { GameSection, Project } from "../variables/Types";
 
