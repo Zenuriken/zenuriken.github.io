@@ -5,16 +5,17 @@ import { Project } from "../variables/Types";
 const CardContainer = styled.a`
   align-items: center;
   all: unset;
-  background-color: #f1f6f9;
+  background-color: rgba(241, 246, 249, 0.9);
   border-radius: 25px;
   box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.25);
   display: flex;
   flex-direction: row;
+  flex-grow: 0;
   flex-shrink: 0;
   gap: 20px;
-  height: 200px;
-  padding: 20px;
-  width: 550px;
+  height: 150px;
+  padding: 15px;
+  width: 720px;
 
   &:hover {
     background-color: #e0e6e9;
@@ -24,8 +25,13 @@ const CardContainer = styled.a`
 `;
 
 const CardImage = styled.img`
-  height: 200px;
-  max-width: 300px;
+  border-radius: 25px;
+  flex-grow: 0;
+  flex-shrink: 0;
+  height: 150px;
+  object-fit: cover;
+  width: 150px;
+  box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, 0.25);
 `;
 
 const TextContainer = styled.div`
@@ -50,7 +56,7 @@ type props = {
   project: Project;
 };
 
-export default function ProjectCard({ project }: props) {
+export default function Card({ project }: props) {
   const { id, image, title, description, link } = project;
 
   const renderDescription = () => {

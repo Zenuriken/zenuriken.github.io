@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { ProjectSection } from "../variables/Types";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 // #region CSS
 const SideNavContainer = styled.div`
@@ -11,12 +11,12 @@ const SideNavContainer = styled.div`
   flex-grow: 0;
   gap: 20px;
   height: 100%;
-  left: 0px;
-  padding: 50px 0px;
-  position: fixed;
+  left: max(calc((100vw - 1100px) / 2), 0px);
+  padding: 200px 0px;
   top: 55px;
   width: 250px;
   z-index: 0;
+  position: fixed;
 `;
 
 const Link = styled.div<{ isCurrentProjectSection: boolean }>`

@@ -12,7 +12,7 @@ const HeaderContainer = styled.div`
   justify-content: space-between;
   position: fixed;
   top: 0px;
-  width: 100%;
+  width: 100vw;
   z-index: 1;
 `;
 
@@ -41,17 +41,17 @@ const LinkContainer = styled.div`
 `;
 
 const Link = styled.div<{ isCurrentPage: boolean }>`
-  display: inline-flex;
-  justify-content: center;
   align-items: center;
-  border-width: 10px;
   border-color: white;
+  border-width: 10px;
+  border: 2px solid transparent;
   color: #f1f6f9;
+  display: inline-flex;
   font-size: 20px;
+  height: 100%;
+  justify-content: center;
   text-align: center;
   width: 100px;
-  height: 100%;
-  border: 2px solid transparent;
 
   pointer-events: ${(props) => (props.isCurrentPage ? "none" : "auto")};
   color: ${(props) => (props.isCurrentPage ? "#9ba4b5" : "#f1f6f9")};
@@ -61,11 +61,8 @@ const Link = styled.div<{ isCurrentPage: boolean }>`
   &:hover {
     color: #9ba4b5;
     cursor: pointer;
-
-    /* border-bottom: 2px solid #9ba4b5; */
   }
 `;
-
 // #endregion
 
 type props = {
@@ -90,7 +87,6 @@ export default function Header({ currentPage, setCurrentPage }: props) {
 
   const onPageChange = (page: Page) => {
     setCurrentPage(page);
-
     // scrollToTarget(page);
   };
 

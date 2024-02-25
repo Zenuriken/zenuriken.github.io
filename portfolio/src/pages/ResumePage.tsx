@@ -2,7 +2,7 @@ import styled from "styled-components";
 import SideNav from "../components/ProjectsSideNav";
 import { ProjectSection, ResumeSection } from "../variables/Types";
 import { useState } from "react";
-import ProjectCard from "../components/ProjectCard";
+import ProjectCard from "../components/Card";
 import projects from "../data/projects.json";
 import ResumeSideNav from "../components/ResumeSideNav";
 

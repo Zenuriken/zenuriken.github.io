@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import ProjectCard from "../components/ProjectCard";
+import ProjectCard from "../components/Card";
 import projects from "../data/projects.json";
 
 // #region CSS

@@ -5,6 +5,13 @@ import HomePage from "./pages/HomePage";
 import { Page } from "./variables/Types";
 import ProjectsPage from "./pages/ProjectsPage";
 import GamesPage from "./pages/GamesPage";
+import styled from "styled-components";
+
+const PageContainer = styled.div`
+  align-items: center;
+  display: flex;
+  justify-content: center;
+`;
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState(Page.HOME);
@@ -14,7 +21,7 @@ export default function App() {
       case Page.HOME:
         return <HomePage />;
       case Page.RESUME:
-        return <div>Resume</div>;
+        return <div> Resume </div>;
       case Page.PROJECTS:
         return <ProjectsPage />;
       case Page.GAMES:
@@ -25,9 +32,9 @@ export default function App() {
   };
 
   return (
-    <>
+    <PageContainer>
       <Header currentPage={currentPage} setCurrentPage={setCurrentPage} />
       {renderPage()}
-    </>
+    </PageContainer>
   );
 }
