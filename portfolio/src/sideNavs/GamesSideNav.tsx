@@ -12,29 +12,21 @@ const SideNavContainer = styled.div`
   flex-grow: 0;
   gap: 20px;
   height: 100%;
-  left: 0px;
-  padding: 50px 0px;
+  left: max(calc((100vw - 1100px) / 2), 0px);
+  padding: 200px 0px;
   position: fixed;
   top: 55px;
   width: 250px;
   z-index: 0;
 `;
 
-const Link = styled.div<{ isCurrentGameSection: boolean }>`
+const Link = styled.div<{ currGameSection: boolean }>`
+  background-color: ${(props) => props.currGameSection ? "#9ba4b5": "none"};
   color: #f1f6f9;
+  color: ${(props) => (props.currGameSection ? "#000000" : "#f1f6f9")};
   font-size: 20px;
+  pointer-events: ${(props) => props.currGameSection ? "none" : "auto"};
   width: 100%;
-
-  pointer-events: ${(props) =>
-    props.isCurrentGameSection
-     ? "none" : "auto"};
-  color: ${(props) => (props.isCurrentGameSection
-     ? "#000000" : "#f1f6f9")};
-  background-image: ${(props) =>
-    props.isCurrentGameSection
-
-      ? "linear-gradient(90deg, #394867 0%, #9ba4b5 100%)"
-      : "none"};
 
   &:hover {
     color: #9ba4b5;
@@ -56,7 +48,7 @@ type props = {
     ) => void;
 };
 
-export default function SideNav({
+export default function GameSideNav({
   currGameSection
   ,
   setCurrGameSection
@@ -101,12 +93,12 @@ export default function SideNav({
   return (
     <SideNavContainer>
       <Link
-        isCurrentGameSection={currGameSection === GameSection.MYGAMES}
+        currGameSection={currGameSection === GameSection.MYGAMES}
         onClick={() => onGameSectionChange(GameSection.MYGAMES)}>
         <LinkText>My Games</LinkText>
       </Link>
       <Link
-        isCurrentGameSection={currGameSection === GameSection.OTHERGAMES}
+        currGameSection={currGameSection === GameSection.OTHERGAMES}
         onClick={() => onGameSectionChange(GameSection.OTHERGAMES)}>
         <LinkText>Other Games</LinkText>
       </Link>

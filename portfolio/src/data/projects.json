@@ -1,211 +1,221 @@
 {
-  "rasterizer": {
-    "id": "rasterizer",
-    "title": "Rasterizer",
-    "description": [
-      "Implemented a rasterizer that converts Scalable Vector Graphic (SVG) files into pixeled images.",
-      "Tested various methods of pixel sampling for texture mapping."
-    ],
-    "image": "/src/assets/rasterizer.png",
-    "link": "https://cal-cs184-student.github.io/sp22-project-webpages-Zenuriken/proj1/index.html"
-  },
-  "meshEdit": {
-    "id": "meshEdit",
-    "title": "Mesh Edit",
-    "description": [
-      "Simulated the physics of cloth by creating a mesh of springs and point masses.",
-      "Used verlet integration and other formulas to compute new positions."
-    ],
-    "image": "/src/assets/meshEdit.png",
-    "link": "https://cal-cs184-student.github.io/sp22-project-webpages-Zenuriken/proj2/index.html"
-  },
-  "pathTracer": {
-    "id": "pathTracer",
-    "title": "Pathtracer",
-    "description": [
-      "Produced renderings of 3D environments using ray intersections and bounding volume hierarchies.",
-      "Added support for direct and global illumination using Monte Carlo Path Tracing."
-    ],
-    "image": "/src/assets/pathtracer.png",
-    "link": "https://cal-cs184-student.github.io/sp22-project-webpages-Zenuriken/proj3-1/index.html"
-  },
-  "pathTracer2": {
-    "id": "pathTracer2",
-    "title": "Pathtracer 2",
-    "description": [
-      "Simulated mirror and glass materials in a 3D environment using ray refraction/reflection.",
-      "Completed a thin-lens model capable of depth refocusing using ray intersections."
-    ],
-    "image": "/src/assets/pathtracer2.png",
-    "link": "https://cal-cs184-student.github.io/sp22-project-webpages-Zenuriken/proj3-2/index.html"
-  },
-  "clothSimulator": {
-    "id": "clothSimulator",
-    "title": "Cloth Simulator",
-    "description": [
-      "Simulated the physics of cloth by constructing a mesh of spring and point mass data structures.",
-      "Applied texture and displacement mapping using vertex and fragment shaders in GLSL."
-    ],
-    "image": "/src/assets/clothSimulator.png",
-    "link": "https://cal-cs184-student.github.io/sp22-project-webpages-Zenuriken/proj4/index.html"
-  },
-  "celShading": {
-    "id": "celShading",
-    "title": "Cel Shading",
-    "description": [
-      "Produced and applied cel-shading to 3D models using Unity’s built-in shader API.",
-      "Animated 3D models using blend trees and programmed basic combat system."
-    ],
-    "image": "/src/assets/celShading.png",
-    "link": "https://cal-cs184-student.github.io/sp22-project-webpages-Zenuriken/proj-final/index.html"
-  },
-  "colorizing": {
-    "id": "colorizing",
-    "title": "Colorizing the Prokudin-Gorskii Photo Collection",
-    "description": [
-      "Aligned colored-separated images using coarse-to-fine image pyramids.",
-      "Computed L2 norm over rescaled images as a metric for alignment."
-    ],
-    "image": "/src/assets/colorizing.jpg",
-    "link": "https://henryla.notion.site/henryla/Project-1-Images-of-the-Russian-Empire-Colorizing-the-Prokudin-Gorskii-Photo-Collection-b24b610cba5a4bcc848d3c165c113081"
-  },
-  "filtersAndFrequencies": {
-    "id": "filtersAndFrequencies",
-    "title": "Fun with Filters And Frequencies",
-    "description": [
-      "Formed hybrid images by combining the low pass and high pass filters of images.",
-      "Completed a multi-resolution blending algorithm using Gaussian and Laplacian stacks."
-    ],
-    "image": "/src/assets/filtersAndFrequencies.jpg",
-    "link": "https://henryla.notion.site/henryla/Project-2-Fun-with-Filters-and-Frequencies-850f2fd8088248098dc8962fe57912b4"
-  },
-  "faceMorphing": {
-    "id": "faceMorphing",
-    "title": "Face Morphing",
-    "description": [
-      "Applied Delaunay triangulation to render meshes over faces for defining key correspondences.",
-      "Animated face morphs and caricatures through linear interpolation of vertices and pixels."
-    ],
-    "image": "/src/assets/faceMorphing.jpg",
-    "link": "https://henryla.notion.site/henryla/Project-3-Face-Morphing-and-Modelling-a-Photo-Collection-ab519fa705774e93866b46e6085f8cb1"
-  },
-  "autostitchingPhotoMosaics": {
-    "id": "autostitchingPhotoMosaics",
-    "title": "Auto-Stitching Photo Mosaics",
-    "description": [
-      "Stitched images together by defining correspondences and computing the homography matrix.",
-      "Implemented auto-stitching using Harris Corner Detection and RANSAC."
-    ],
-    "image": "/src/assets/autostitchingPhotoMosaics.jpg",
-    "link": "https://henryla.notion.site/henryla/Project-4-Auto-stitching-and-Photo-Mosaics-5cdc3db7753f4a569be31dd19645bd1f"
-  },
-  "facialKeypointDetection": {
-    "id": "facialKeypointDetection",
-    "title": "Facial Keypoint Detection with Neural Networks",
-    "description": [
-      "Designed a convolutional neural network capable of detecting facial keypoints for images using PyTorch.",
-      "Optimized model by iteratively adjusting hyperparameters based on the training vs. validation loss."
-    ],
-    "image": "/src/assets/facialKeypointDetection.png",
-    "link": "https://henryla.notion.site/henryla/Project-5-Facial-Keypoint-Detection-with-Neural-Networks-b449fb4b790f4275824e0d0142048112"
-  },
-  "poorMansAugmentedReality": {
-    "id": "poorMansAugmentedReality",
-    "title": "Poor Man's Augmented Reality",
-    "description": [
-      "Developed a simple form of augmented reality by using OpenCV’s built-in trackers.",
-      "Inserted a synthetic object into the scene by computing the camera projection matrix for every frame."
-    ],
-    "image": "/src/assets/poorMansAugmentedReality.png",
-    "link": "https://henryla.notion.site/henryla/Final-Project-1-Poor-Man-s-Augmented-Reality-adac77af6c344828a3f04ff28ec575f3"
-  },
-  "lightFieldCamera": {
-    "id": "lightFieldCamera",
-    "title": "Light Field Camera",
-    "description": [
-      "Simulated the effects of light field cameras by shifting and averaging rectified images.",
-      "Implemented interactive depth refocusing using Gaussian pyramid image alignment."
-    ],
-    "image": "/src/assets/lightFieldCamera.png",
-    "link": "https://henryla.notion.site/henryla/Final-Project-2-Light-Field-Camera-2baa1b20b2764d4289d107f0c1218e82"
-  },
-  "voltz": {
-    "id": "voltz",
-    "title": "Voltz",
-    "description": [
-      "Completed a transportation-converter that displays the time and distances for different modes of transport.",
-      "Functionality created using JavaScript and webpage was stylized using CSS and Bootstrap."
-    ],
-    "image": "/src/assets/voltz.png",
-    "link": "https://youtu.be/Yad7eQpomLs?si=y3HJxX3InrWA47M2"
-  },
-  "storyScape": {
-    "id": "storyScape",
-    "title": "StoryScape",
-    "description": [
-      "Designed and developed a web app that uses ChatGPT and Dall-E to generate children stories.",
-      "Implemented OpenAI API calls and assisted with prompt engineering."
-    ],
-    "image": "/src/assets/storyScape.png",
-    "link": "https://youtu.be/8zRXgME0XCQ?si=dqHstapPxyKTN1AN"
-  },
-  "ghostOfViridia": {
-    "id": "ghostOfViridia",
-    "title": "Ghost of Viridia",
-    "description": [
-      "Assassinate the people you once called heroes and uncover the hidden truth of Viridia's past."
-    ],
-    "image": "/src/assets/ghostOfViridia.png",
-    "link": "https://zenuriken.itch.io/ghost-of-viridia"
-  },
-  "totallyNotDoom": {
-    "id": "totallyNotDoom",
-    "title": "Totally Not Doom",
-    "description": ["A tech demo for 3D cel-shading in Unity"],
-    "image": "/src/assets/totallyNotDoom.png",
-    "link": "https://zenuriken.itch.io/totally-not-doom"
-  },
-  "bearsBobaria": {
-    "id": "bearsBobaria",
-    "title": "Bear's Bobaria",
-    "description": [
-      "Welcome to your boba shop! Mix and match a variety of tea, ingredients, and toppings to create delicious drinks."
-    ],
-    "image": "/src/assets/bearsBobaria.png",
-    "link": "https://zenuriken.itch.io/bears-bobaria"
-  },
-  "metal": {
-    "id": "metal",
-    "title": "[ME][TA]L",
-    "description": [
-      "[ME][TA]L is a rhythm game revolving around, you guessed it, metal! But it's not like your average rhythm game, so be careful. >:)"
-    ],
-    "image": "/src/assets/metal.png",
-    "link": "https://penguinies.itch.io/metal"
-  },
-  "dontWakeUp": {
-    "id": "dontWakeUp",
-    "title": "Don't Wake Up",
-    "description": [
-      "A horror game where you help a girl wake up from her nightmares."
-    ],
-    "image": "/src/assets/dontWakeUp.png",
-    "link": "https://rosenbleu.itch.io/dont-wake-up"
-  },
-  "slimeAttack": {
-    "id": "slimeAttack",
-    "title": "Slime Attack",
-    "description": ["2D Platformer where you play as a slime"],
-    "image": "/src/assets/slimeAttack.png",
-    "link": "https://kevponce4.itch.io/slime-attack"
-  },
-  "polyDrome": {
-    "id": "polyDrome",
-    "title": "Polydrome",
-    "description": [
-      "You act as a brave polygon, trying to protect your edges from being robbed by the zombie polygons - zolygons."
-    ],
-    "image": "/src/assets/polyDrome.png",
-    "link": "https://guardhei.itch.io/polydrome"
-  }
+  "computerGraphics": [
+    {
+      "id": "rasterizer",
+      "title": "Rasterizer",
+      "description": [
+        "Implemented a rasterizer that converts Scalable Vector Graphic (SVG) files into pixeled images.",
+        "Tested various methods of pixel sampling for texture mapping."
+      ],
+      "image": "/src/assets/rasterizer.png",
+      "link": "https://cal-cs184-student.github.io/sp22-project-webpages-Zenuriken/proj1/index.html"
+    },
+    {
+      "id": "meshEdit",
+      "title": "Mesh Edit",
+      "description": [
+        "Simulated the physics of cloth by creating a mesh of springs and point masses.",
+        "Used verlet integration and other formulas to compute new positions."
+      ],
+      "image": "/src/assets/meshEdit.png",
+      "link": "https://cal-cs184-student.github.io/sp22-project-webpages-Zenuriken/proj2/index.html"
+    },
+    {
+      "id": "pathTracer",
+      "title": "Pathtracer",
+      "description": [
+        "Produced renderings of 3D environments using ray intersections and bounding volume hierarchies.",
+        "Added support for direct and global illumination using Monte Carlo Path Tracing."
+      ],
+      "image": "/src/assets/pathtracer.png",
+      "link": "https://cal-cs184-student.github.io/sp22-project-webpages-Zenuriken/proj3-1/index.html"
+    },
+    {
+      "id": "pathTracer2",
+      "title": "Pathtracer 2",
+      "description": [
+        "Simulated mirror and glass materials in a 3D environment using ray refraction/reflection.",
+        "Completed a thin-lens model capable of depth refocusing using ray intersections."
+      ],
+      "image": "/src/assets/pathtracer2.png",
+      "link": "https://cal-cs184-student.github.io/sp22-project-webpages-Zenuriken/proj3-2/index.html"
+    },
+    {
+      "id": "clothSimulator",
+      "title": "Cloth Simulator",
+      "description": [
+        "Simulated the physics of cloth by constructing a mesh of spring and point mass data structures.",
+        "Applied texture and displacement mapping using vertex and fragment shaders in GLSL."
+      ],
+      "image": "/src/assets/clothSimulator.png",
+      "link": "https://cal-cs184-student.github.io/sp22-project-webpages-Zenuriken/proj4/index.html"
+    },
+    {
+      "id": "celShading",
+      "title": "Cel Shading",
+      "description": [
+        "Produced and applied cel-shading to 3D models using Unity’s built-in shader API.",
+        "Animated 3D models using blend trees and programmed basic combat system."
+      ],
+      "image": "/src/assets/celShading.png",
+      "link": "https://cal-cs184-student.github.io/sp22-project-webpages-Zenuriken/proj-final/index.html"
+    }
+  ],
+  "computerVision": [
+    {
+      "id": "colorizing",
+      "title": "Colorizing the Prokudin-Gorskii Photo Collection",
+      "description": [
+        "Aligned colored-separated images using coarse-to-fine image pyramids.",
+        "Computed L2 norm over rescaled images as a metric for alignment."
+      ],
+      "image": "/src/assets/colorizing.jpg",
+      "link": "https://henryla.notion.site/henryla/Project-1-Images-of-the-Russian-Empire-Colorizing-the-Prokudin-Gorskii-Photo-Collection-b24b610cba5a4bcc848d3c165c113081"
+    },
+    {
+      "id": "filtersAndFrequencies",
+      "title": "Fun with Filters And Frequencies",
+      "description": [
+        "Formed hybrid images by combining the low pass and high pass filters of images.",
+        "Completed a multi-resolution blending algorithm using Gaussian and Laplacian stacks."
+      ],
+      "image": "/src/assets/filtersAndFrequencies.jpg",
+      "link": "https://henryla.notion.site/henryla/Project-2-Fun-with-Filters-and-Frequencies-850f2fd8088248098dc8962fe57912b4"
+    },
+    {
+      "id": "faceMorphing",
+      "title": "Face Morphing",
+      "description": [
+        "Applied Delaunay triangulation to render meshes over faces for defining key correspondences.",
+        "Animated face morphs and caricatures through linear interpolation of vertices and pixels."
+      ],
+      "image": "/src/assets/faceMorphing.jpg",
+      "link": "https://henryla.notion.site/henryla/Project-3-Face-Morphing-and-Modelling-a-Photo-Collection-ab519fa705774e93866b46e6085f8cb1"
+    },
+    {
+      "id": "autostitchingPhotoMosaics",
+      "title": "Auto-Stitching Photo Mosaics",
+      "description": [
+        "Stitched images together by defining correspondences and computing the homography matrix.",
+        "Implemented auto-stitching using Harris Corner Detection and RANSAC."
+      ],
+      "image": "/src/assets/autostitchingPhotoMosaics.jpg",
+      "link": "https://henryla.notion.site/henryla/Project-4-Auto-stitching-and-Photo-Mosaics-5cdc3db7753f4a569be31dd19645bd1f"
+    },
+    {
+      "id": "facialKeypointDetection",
+      "title": "Facial Keypoint Detection with Neural Networks",
+      "description": [
+        "Designed a convolutional neural network capable of detecting facial keypoints for images using PyTorch.",
+        "Optimized model by iteratively adjusting hyperparameters based on the training vs. validation loss."
+      ],
+      "image": "/src/assets/facialKeypointDetection.png",
+      "link": "https://henryla.notion.site/henryla/Project-5-Facial-Keypoint-Detection-with-Neural-Networks-b449fb4b790f4275824e0d0142048112"
+    },
+    {
+      "id": "poorMansAugmentedReality",
+      "title": "Poor Man's Augmented Reality",
+      "description": [
+        "Developed a simple form of augmented reality by using OpenCV’s built-in trackers.",
+        "Inserted a synthetic object into the scene by computing the camera projection matrix for every frame."
+      ],
+      "image": "/src/assets/poorMansAugmentedReality.png",
+      "link": "https://henryla.notion.site/henryla/Final-Project-1-Poor-Man-s-Augmented-Reality-adac77af6c344828a3f04ff28ec575f3"
+    },
+    {
+      "id": "lightFieldCamera",
+      "title": "Light Field Camera",
+      "description": [
+        "Simulated the effects of light field cameras by shifting and averaging rectified images.",
+        "Implemented interactive depth refocusing using Gaussian pyramid image alignment."
+      ],
+      "image": "/src/assets/lightFieldCamera.png",
+      "link": "https://henryla.notion.site/henryla/Final-Project-2-Light-Field-Camera-2baa1b20b2764d4289d107f0c1218e82"
+    }
+  ],
+  "webDevelopment": [
+    {
+      "id": "voltz",
+      "title": "Voltz",
+      "description": [
+        "Completed a transportation-converter that displays the time and distances for different modes of transport.",
+        "Functionality created using JavaScript and webpage was stylized using CSS and Bootstrap."
+      ],
+      "image": "/src/assets/voltz.png",
+      "link": "https://youtu.be/Yad7eQpomLs?si=y3HJxX3InrWA47M2"
+    },
+    {
+      "id": "storyScape",
+      "title": "StoryScape",
+      "description": [
+        "Designed and developed a web app that uses ChatGPT and Dall-E to generate children stories.",
+        "Implemented OpenAI API calls and assisted with prompt engineering."
+      ],
+      "image": "/src/assets/storyScape.png",
+      "link": "https://youtu.be/8zRXgME0XCQ?si=dqHstapPxyKTN1AN"
+    }
+  ],
+  "myGames": [
+    {
+      "id": "ghostOfViridia",
+      "title": "Ghost of Viridia",
+      "description": [
+        "Assassinate the people you once called heroes and uncover the hidden truth of Viridia's past."
+      ],
+      "image": "/src/assets/ghostOfViridia.png",
+      "link": "https://zenuriken.itch.io/ghost-of-viridia"
+    },
+    {
+      "id": "totallyNotDoom",
+      "title": "Totally Not Doom",
+      "description": ["A tech demo for 3D cel-shading in Unity"],
+      "image": "/src/assets/totallyNotDoom.png",
+      "link": "https://zenuriken.itch.io/totally-not-doom"
+    },
+    {
+      "id": "bearsBobaria",
+      "title": "Bear's Bobaria",
+      "description": [
+        "Welcome to your boba shop! Mix and match a variety of tea, ingredients, and toppings to create delicious drinks."
+      ],
+      "image": "/src/assets/bearsBobaria.png",
+      "link": "https://zenuriken.itch.io/bears-bobaria"
+    }
+  ],
+  "otherGames": [
+    {
+      "id": "metal",
+      "title": "[ME][TA]L",
+      "description": [
+        "[ME][TA]L is a rhythm game revolving around, you guessed it, metal! But it's not like your average rhythm game, so be careful. >:)"
+      ],
+      "image": "/src/assets/metal.png",
+      "link": "https://penguinies.itch.io/metal"
+    },
+    {
+      "id": "dontWakeUp",
+      "title": "Don't Wake Up",
+      "description": [
+        "A horror game where you help a girl wake up from her nightmares."
+      ],
+      "image": "/src/assets/dontWakeUp.png",
+      "link": "https://rosenbleu.itch.io/dont-wake-up"
+    },
+    {
+      "id": "slimeAttack",
+      "title": "Slime Attack",
+      "description": ["2D Platformer where you play as a slime"],
+      "image": "/src/assets/slimeAttack.png",
+      "link": "https://kevponce4.itch.io/slime-attack"
+    },
+    {
+      "id": "polyDrome",
+      "title": "Polydrome",
+      "description": [
+        "You act as a brave polygon, trying to protect your edges from being robbed by the zombie polygons - zolygons."
+      ],
+      "image": "/src/assets/polyDrome.png",
+      "link": "https://guardhei.itch.io/polydrome"
+    }
+  ]
 }

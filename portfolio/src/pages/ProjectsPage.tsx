@@ -1,15 +1,12 @@
 import styled from "styled-components";
-import SideNav from "../components/ProjectsSideNav";
-import { ProjectSection } from "../variables/Types";
+import SideNav from "../sideNavs/ProjectsSideNav";
+import { Project, ProjectSection } from "../variables/Types";
 import { useState } from "react";
 import Card from "../components/Card";
 import projects from "../data/projects.json";
 
 // #region CSS
 const ProjectPageContainer = styled.div`
-  /* border-color: #00ff77;
-  border-style: solid;
-  border-width: 1px; */
   display: flex;
   flex-direction: row;
   gap: 20px;
@@ -18,10 +15,7 @@ const ProjectPageContainer = styled.div`
   justify-content: flex-end;
 `;
 
-const ProjectCardsContainer = styled.div`
-  /* border-color: red;
-  border-style: solid;
-  border-width: 1px; */
+const CardsContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -54,38 +48,30 @@ export default function ProjectsPage() {
     ProjectSection.COMPUTERGRAPHICS
   );
 
+  const renderProjSection = (section: Project[]) => {
+    return (
+      <CardContainer>
+        {section.map(project => {
+          return(<Card project={project}/>);
+        })}
+      </CardContainer>
+    )
+  }
+
   return (
     <ProjectPageContainer>
       <SideNav
         currProjectSection={currProjectSection}
         setCurrProjectSection={setCurrProjectSection}
       />
-      <ProjectCardsContainer>
+      <CardsContainer>
         <Title id="computerGraphics">Computer Graphics (C++)</Title>
-        <CardContainer>
-          <Card project={projects.rasterizer} />
-          <Card project={projects.meshEdit} />
-          <Card project={projects.pathTracer} />
-          <Card project={projects.pathTracer2} />
-          <Card project={projects.clothSimulator} />
-          <Card project={projects.celShading} />
-        </CardContainer>
+        {renderProjSection(projects.computerGraphics)}
         <Title id="computerVision">Computer Vision (Python)</Title>
-        <CardContainer>
-          <Card project={projects.colorizing} />
-          <Card project={projects.filtersAndFrequencies} />
-          <Card project={projects.faceMorphing} />
-          <Card project={projects.autostitchingPhotoMosaics} />
-          <Card project={projects.facialKeypointDetection} />
-          <Card project={projects.poorMansAugmentedReality} />
-          <Card project={projects.lightFieldCamera} />
-        </CardContainer>
+        {renderProjSection(projects.computerVision)}
         <Title id="webDevelopment">Web Development (JS, CSS, React)</Title>
-        <CardContainer>
-          <Card project={projects.voltz} />
-          <Card project={projects.storyScape} />
-        </CardContainer>
-      </ProjectCardsContainer>
+        {renderProjSection(projects.webDevelopment)}
+      </CardsContainer>
     </ProjectPageContainer>
   );
 }

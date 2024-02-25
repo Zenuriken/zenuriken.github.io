@@ -1,10 +1,10 @@
 import styled from "styled-components";
-import SideNav from "../components/ProjectsSideNav";
+import SideNav from "../sideNavs/ProjectsSideNav";
 import { ProjectSection, ResumeSection } from "../variables/Types";
 import { useState } from "react";
 import ProjectCard from "../components/Card";
 import projects from "../data/projects.json";
-import ResumeSideNav from "../components/ResumeSideNav";
+import ResumeSideNav from "../sideNavs/ResumeSideNav";
 
 // #region CSS
 const ProjectPageContainer = styled.div`

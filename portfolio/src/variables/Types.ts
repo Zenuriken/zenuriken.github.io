@@ -47,6 +47,8 @@ export enum GameSection {
   OTHERGAMES = "otherGames",
 }
 
+export type Section = ProjectSection | ResumeSection | GameSection;
+
 export type Project = {
   id: string;
   title: string;

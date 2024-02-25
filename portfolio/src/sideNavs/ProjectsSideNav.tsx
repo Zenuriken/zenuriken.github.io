@@ -13,24 +13,19 @@ const SideNavContainer = styled.div`
   height: 100%;
   left: max(calc((100vw - 1100px) / 2), 0px);
   padding: 200px 0px;
+  position: fixed;
   top: 55px;
   width: 250px;
   z-index: 0;
-  position: fixed;
 `;
 
 const Link = styled.div<{ isCurrentProjectSection: boolean }>`
+  background-image: ${(props) => props.isCurrentProjectSection ? `linear-gradient(90deg, rgba(155, 164, 181, 0), rgba(155, 164, 181, 1))` : `none`};
   color: #f1f6f9;
-  font-size: 20px;
-  width: 100%;
-
-  pointer-events: ${(props) =>
-    props.isCurrentProjectSection ? "none" : "auto"};
   color: ${(props) => (props.isCurrentProjectSection ? "#000000" : "#f1f6f9")};
-  background-image: ${(props) =>
-    props.isCurrentProjectSection
-      ? "linear-gradient(90deg, #394867 0%, #9ba4b5 100%)"
-      : "none"};
+  font-size: 20px;
+  pointer-events: ${(props) => props.isCurrentProjectSection ? "none" : "auto"};
+  width: 100%;
 
   &:hover {
     color: #9ba4b5;
@@ -49,7 +44,7 @@ type props = {
   setCurrProjectSection: (projectSection: ProjectSection) => void;
 };
 
-export default function SideNav({
+export default function ProjectSideNav({
   currProjectSection,
   setCurrProjectSection,
 }: props) {
