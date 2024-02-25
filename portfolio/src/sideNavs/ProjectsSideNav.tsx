@@ -66,7 +66,7 @@ export default function ProjectSideNav({
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  });
 
   const scrollToTarget = (id: string) => {
     const element = document.getElementById(id);
