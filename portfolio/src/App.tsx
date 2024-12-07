@@ -9,6 +9,7 @@ import styled from "styled-components";
 import ResumePage from "./pages/ResumePage";
 import SideNav from "./sideNavs/SideNav";
 import { render } from "react-dom";
+import { pageToSections } from "./variables/Constants";
 
 const PageContainer = styled.div`
   align-items: center;
@@ -21,19 +22,24 @@ export default function App() {
 
   const renderHeader = () => {
     return <Header currentPage={currentPage} setCurrentPage={setCurrentPage} />;
-  }
+  };
 
   const renderSideNav = () => {
     if (currentPage === Page.HOME) return null;
-    return <SideNav currentPage={currentPage} setCurrentPage={setCurrentPage} />;
-  }
+    return (
+      <SideNav
+        currentPage={currentPage}
+        section={pageToSections[currentPage]}
+      />
+    );
+  };
 
   const renderPage = () => {
     switch (currentPage) {
       case Page.HOME:
         return <HomePage />;
       case Page.RESUME:
-        return <ResumePage/>;
+        return <ResumePage />;
       case Page.PROJECTS:
         return <ProjectsPage />;
       case Page.GAMES:

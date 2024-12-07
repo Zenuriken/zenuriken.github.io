@@ -23,13 +23,14 @@ export const deviceQuery = {
 
 // Holds the values of all the different pages.
 export enum Page {
-  HOME,
-  RESUME,
-  PROJECTS,
-  GAMES,
+  HOME = "home",
+  RESUME = "resume",
+  PROJECTS = "projects",
+  GAMES = "games",
 }
 
 // Holds the values of all the different pages.
+
 export enum ProjectSection {
   COMPUTERGRAPHICS = "computerGraphics",
   COMPUTERVISION = "computerVision",
